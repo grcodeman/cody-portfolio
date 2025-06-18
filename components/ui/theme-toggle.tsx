@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { Button } from "./button";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-export function themeToggle() {
+export default function themeToggle() {
     const {theme, setTheme} = useTheme();
 
     return (
