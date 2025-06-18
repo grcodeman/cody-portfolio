@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Followed this [tutorial video](https://www.youtube.com/watch?v=12ZeRqf5CQE) from **How To Web Dev** on youtube.
+## Credit
+
+Followed this [tutorial video](https://www.youtube.com/watch?v=12ZeRqf5CQE) from **How To Web Dev** on youtube to get started.
 
 ## Getting Started
 
