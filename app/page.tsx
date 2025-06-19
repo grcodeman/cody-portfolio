@@ -66,19 +66,19 @@ export default function Home() {
           >
             <Button className="rounded-full bg-gradient-to-r from-rose-600 to-indigo-600 text-white transition-transform hover:scale-105">Resume</Button>
 
-            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <Link href="https://github.com/grcodeman" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
               <FaGithub className="w-6 h-6"></FaGithub>
             </Link>
 
-            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <Link href="https://www.linkedin.com/in/codythornell/" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
               <FaLinkedin className="w-6 h-6"></FaLinkedin>
             </Link>
 
-            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <Link href="https://x.com/codythornell" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
               <FaTwitter className="w-6 h-6"></FaTwitter>
             </Link>
 
-            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <Link href="https://www.youtube.com/@grcodeman" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
               <FaYoutube className="w-6 h-6"></FaYoutube>
             </Link>
           </motion.div>
