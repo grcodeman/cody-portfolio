@@ -133,7 +133,19 @@ export default function Home() {
 
           </motion.section>
 
+          {/* Projects Section */}
+          <motion.section
+          initial={{opacity: 0, y: 100}}
+          animate={{opacity: 1, y:0}}
+          transition={{duration: 0.8}}
+          
+          className="space-y-8"
+          >
+            <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
+
+
+          </motion.section>
 
         </main>
 
