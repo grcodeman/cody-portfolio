@@ -5,6 +5,8 @@ import pfp from "../public/pfp.png";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -43,7 +45,23 @@ export default function Home() {
 
           className="flex items-center gap-3"
           >
-            <Button className="rounded-full bg-gradient-to-r from-rose-400 to-indigo-600 text-white transition-transform hover:scale-105">Resume</Button>
+            <Button className="rounded-full bg-gradient-to-r from-rose-600 to-indigo-600 text-white transition-transform hover:scale-105">Resume</Button>
+
+            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <FaGithub className="w-6 h-6"></FaGithub>
+            </Link>
+
+            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <FaLinkedin className="w-6 h-6"></FaLinkedin>
+            </Link>
+
+            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <FaTwitter className="w-6 h-6"></FaTwitter>
+            </Link>
+
+            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <FaYoutube className="w-6 h-6"></FaYoutube>
+            </Link>
           </motion.div>
 
         </main>
