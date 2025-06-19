@@ -88,6 +88,19 @@ export default function Home() {
           className="space-y-8"
           >
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Experience</h2>
+
+            <div className="space-y-8">
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">May 2023 - Present</p>
+                  <p className="font-medium">IT System Administrator</p>
+                  <p className="text-blue-600 dark:text-blue-400">WMU CAE Center</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                fjhsohfoiwhefjwbefojwebfowebfouwbefouwebfuowbfuwbfuwfbiuwfbuwiebfwiubfwuibfiwufbiuwebfiuwbfiuwbfiubw.
+              </p>
+            </div>
           </motion.section>
 
         </main>
