@@ -26,6 +26,8 @@ export default function Home() {
         </motion.header>
 
         <main className="space-y-10">
+
+          <section className="space-y-10">
           <motion.div
           initial={{opacity: 0, x: 100}}
           animate={{opacity: 1, x:0}}
@@ -36,6 +38,18 @@ export default function Home() {
             <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Cody Thornell</h1>
             <p className="text-gray-600 dark:text-gray-400">MBA/CS Student</p>
             <p className="text-gray-600 dark:text-gray-400">Kalamazoo, MI</p>
+          </motion.div>
+
+          <motion.div
+          initial={{opacity: 0, x: -100}}
+          animate={{opacity: 1, x:0}}
+          transition={{duration: 0.8}}
+
+          className="space-y-3"
+          >
+            <h2 className="text-lg font-semibold">IT and Software Developer</h2>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Experienced developer with a multitude of software projects and IT experience. My skillsets range from coding languages like <span className="text-black dark:text-white">Python, Typescript, Dart</span> to managing systems such as <span className="text-black dark:text-white">Licensing Servers and Oracle EBS</span>.</p>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Beyond software development and IT work, I love building side projects and am passionate for learning more about startups.</p>
           </motion.div>
 
           <motion.div
@@ -63,6 +77,7 @@ export default function Home() {
               <FaYoutube className="w-6 h-6"></FaYoutube>
             </Link>
           </motion.div>
+          </section>
 
         </main>
 
