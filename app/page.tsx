@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -143,7 +144,23 @@ export default function Home() {
           >
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={pfp} alt="todo add this" className="rounded-lg mb-4"/>
 
+                  <div className="flex items-center justify-between">
+
+                    <div>
+                      <h3 className="font-medium">Project 1</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Next.js, Typescript</p>
+                    </div>
+
+                    <Button variant="ghost" size="icon">+</Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
 
           </motion.section>
 
