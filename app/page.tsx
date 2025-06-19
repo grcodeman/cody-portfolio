@@ -97,8 +97,12 @@ export default function Home() {
                   <p className="text-blue-600 dark:text-blue-400">WMU CAE Center</p>
                 </div>
               </div>
+              {/* TODO: syle up list */}
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                fjhsohfoiwhefjwbefojwebfowebfouwbefouwebfuowbfuwbfuwfbiuwfbuwiebfwiubfwuibfiwufbiuwebfiuwbfiuwbfiubw.
+                ● Provided comprehensive IT support, troubleshooting and resolving issues related to computers, printers, projectors, and other tech equipment. <br />
+                ● Assisted in managing licensing servers and worked with computer imaging to ensure streamlined installations and software configurations. <br />
+                ● Utilized a ticket-based system for efficient task management, addressing both team and individual IT requirements. <br />
+                ● Developed basic scripts for system checks and actively contributed to the documentation of best practices on the company's internal wiki.
               </p>
             </div>
           </motion.section>
