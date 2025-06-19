@@ -13,6 +13,7 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
       <div className="mx-auto max-w-xl px-4 py-20">
 
+        {/* PFP and Theme Toggle */}
         <motion.header 
         initial={{opacity: 0, x: -100}}
         animate={{opacity: 1, x:0}}
@@ -28,6 +29,7 @@ export default function Home() {
         <main className="space-y-10">
 
           <section className="space-y-10">
+          {/* Name and Information */}
           <motion.div
           initial={{opacity: 0, x: 100}}
           animate={{opacity: 1, x:0}}
@@ -40,6 +42,7 @@ export default function Home() {
             <p className="text-gray-600 dark:text-gray-400">Kalamazoo, MI</p>
           </motion.div>
 
+          {/* Title and Description */}
           <motion.div
           initial={{opacity: 0, x: -100}}
           animate={{opacity: 1, x:0}}
@@ -52,6 +55,7 @@ export default function Home() {
             <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Beyond software development and IT work, I love building side projects and am passionate for learning more about startups.</p>
           </motion.div>
 
+          {/* Resume and Socials */}
           <motion.div
           initial={{opacity: 0, x: 50}}
           animate={{opacity: 1, x:0}}
@@ -79,7 +83,7 @@ export default function Home() {
           </motion.div>
           </section>
 
-
+          {/* Experience Section */}
           <motion.section
           initial={{opacity: 0, y: 100}}
           animate={{opacity: 1, y:0}}
@@ -107,12 +111,13 @@ export default function Home() {
             </div>
           </motion.section>
 
+          {/* Education Section */}
           <motion.section
           initial={{opacity: 0, y: 100}}
           animate={{opacity: 1, y:0}}
           transition={{duration: 0.8}}
           
-          className=""
+          className="space-y-8"
           >
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Education</h2>
 
@@ -127,6 +132,8 @@ export default function Home() {
             </div>
 
           </motion.section>
+
+
 
         </main>
 
