@@ -4,6 +4,7 @@ import Image from "next/image";
 import pfp from "../public/pfp.png";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -34,6 +35,17 @@ export default function Home() {
             <p className="text-gray-600 dark:text-gray-400">MBA/CS Student</p>
             <p className="text-gray-600 dark:text-gray-400">Kalamazoo, MI</p>
           </motion.div>
+
+          <motion.div
+          initial={{opacity: 0, x: 50}}
+          animate={{opacity: 1, x:0}}
+          transition={{duration: 0.8}}
+
+          className="flex items-center gap-3"
+          >
+            <Button className="rounded-full bg-gradient-to-r from-rose-400 to-indigo-600 text-white transition-transform hover:scale-105">Resume</Button>
+          </motion.div>
+
         </main>
 
       </div>
