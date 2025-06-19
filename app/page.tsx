@@ -116,6 +116,16 @@ export default function Home() {
           >
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Education</h2>
 
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Aug 2022 - Apr 2025</p>
+                  <p className="Font Medium">Computer Science B.S.</p>
+                  <p className="text-blue-600 dark:text-blue-400">Western Michigan Univeristy</p>
+                </div>
+              </div>
+            </div>
+
           </motion.section>
 
         </main>
