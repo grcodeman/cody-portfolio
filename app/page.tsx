@@ -79,7 +79,7 @@ export default function Home() {
               <FaTwitter className="w-6 h-6"></FaTwitter>
             </Link>
 
-            <Link href="https://www.youtube.com/@grcodeman" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <Link href="https://www.youtube.com/@codewcody" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
               <FaYoutube className="w-6 h-6"></FaYoutube>
             </Link>
           </motion.div>
