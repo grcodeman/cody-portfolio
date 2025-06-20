@@ -108,7 +108,7 @@ export default function Home() {
                 ● Provided comprehensive IT support, troubleshooting and resolving issues related to computers, printers, projectors, and other tech equipment. <br />
                 ● Assisted in managing licensing servers and worked with computer imaging to ensure streamlined installations and software configurations. <br />
                 ● Utilized a ticket-based system for efficient task management, addressing both team and individual IT requirements. <br />
-                ● Developed basic scripts for system checks and actively contributed to the documentation of best practices on the company's internal wiki.
+                ● Developed basic scripts for system checks and actively contributed to the documentation of best practices on the company&apos;s internal wiki.
               </p>
             </div>
 
