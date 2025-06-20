@@ -186,7 +186,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
                 <CardContent className="p-4">
-                  <Image src={atom} alt="todo add this" className="rounded-lg mb-4"/>
+                  <Image src={atom} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
 
                   <div className="flex items-center justify-between">
 
