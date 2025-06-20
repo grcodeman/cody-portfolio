@@ -111,6 +111,22 @@ export default function Home() {
                 ● Developed basic scripts for system checks and actively contributed to the documentation of best practices on the company's internal wiki.
               </p>
             </div>
+
+            <div className="space-y-8">
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">May 2024 - Feb 2025</p>
+                  <p className="font-medium">IT Systems Engineering Intern/Co-op</p>
+                  <p className="text-blue-600 dark:text-blue-400">Gentex Corporation</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                ● Developed scripts and Power BI reports for multiple IT teams, enhancing operational efficiency and data analysis. <br />
+                ● Trained with the Oracle DBA team, performing DBA tasks on Oracle EBS systems via Linux and web interfaces, as well as assisting with database patching and cloning. <br />
+                ● Engineered scripts and queries using Bash, SQL, PL/SQL, and Python for Linux maintenance and IT reporting needs. <br />
+                ● Collaborated with cross-functional teams and responded to system requests, gaining expertise in Oracle EBS systems and improving communication skills.
+              </p>
+            </div>
           </motion.section>
 
           {/* Education Section */}
