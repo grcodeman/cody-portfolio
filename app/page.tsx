@@ -179,7 +179,9 @@ export default function Home() {
                       <p className="text-sm text-gray-600 dark:text-gray-400">Unity, Flutter, Firebase</p>
                     </div>
 
-                    <Button variant="ghost" size="icon">→</Button>
+                    <Link href="https://wmich.edu/news/2023/05/71778" target="_blank">
+                      <Button variant="ghost" size="icon">→</Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
