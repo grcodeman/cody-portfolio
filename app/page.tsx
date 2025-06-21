@@ -142,8 +142,8 @@ export default function Home() {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2025 - Present</p>
-                  <p className="Font Medium">MBA</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2025 - Exp May 2027</p>
+                  <p className="Font Medium">MBA Admitted</p>
                   <p className="text-blue-600 dark:text-blue-400">Western Michigan Univeristy</p>
                 </div>
               </div>
