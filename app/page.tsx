@@ -16,17 +16,20 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
       <div className="mx-auto max-w-xl px-4 py-20">
 
-        {/* PFP, Nav, Theme Toggle */}
+        {/* Header Section */}
         <motion.header 
         initial={{opacity: 0, y: -100}}
         animate={{opacity: 1, y:0}}
         transition={{duration: 0.8}}
         
         className="flex items-center justify-between mb-12">
+
+          {/* PFP */}
           <div className="w-20 h-20 rounded-full overflow-hidden">
             <Image src={pfp} alt="profile picture" className="cursor-pointer transition-all duration-300 hover:scale-110"></Image>
           </div>
 
+          {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-4">
             <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
               Home
@@ -39,6 +42,7 @@ export default function Home() {
             </Link>
           </nav>
 
+          {/* Mobile Nav */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="md:hidden">
@@ -58,7 +62,9 @@ export default function Home() {
             </DropdownMenuContent>
           </DropdownMenu>
 
+          {/* Theme Button */}
           <ThemeToggle />
+
         </motion.header>
 
         <main className="space-y-10">
