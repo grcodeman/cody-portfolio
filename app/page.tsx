@@ -37,6 +37,21 @@ export default function Home() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
               
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/blog" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
+                    Blog
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/contact" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
+                    Contact
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
