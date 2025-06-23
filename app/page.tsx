@@ -8,25 +8,64 @@ import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaYoutube, FaBars } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
       <div className="mx-auto max-w-xl px-4 py-20">
 
-        {/* PFP and Theme Toggle */}
+        {/* Header Section */}
         <motion.header 
-        initial={{opacity: 0, x: -100}}
-        animate={{opacity: 1, x:0}}
+        initial={{opacity: 0, y: -100}}
+        animate={{opacity: 1, y:0}}
         transition={{duration: 0.8}}
         
         className="flex items-center justify-between mb-12">
+
+          {/* PFP */}
           <div className="w-20 h-20 rounded-full overflow-hidden">
             <Image src={pfp} alt="profile picture" className="cursor-pointer transition-all duration-300 hover:scale-110"></Image>
           </div>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex space-x-4">
+            <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
+              Home
+            </Link>
+            <Link href="/blog" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
+              Blog
+            </Link>
+            <Link href="/contact" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
+              Contact
+            </Link>
+          </nav>
+
+          {/* Mobile Nav */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="md:hidden">
+                <FaBars className="w-6 h-6" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent sideOffset={4} className="md:hidden">
+              <DropdownMenuItem asChild>
+                <Link href="/">Home</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/blog">Blog</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/contact">Contact</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {/* Theme Button */}
           <ThemeToggle />
+
         </motion.header>
 
         <main className="space-y-10">

@@ -2,7 +2,7 @@ Hi, I'm building a portfolio site to gain more web dev experience and to list of
 
 ## Credit
 
-Followed this [tutorial video](https://www.youtube.com/watch?v=12ZeRqf5CQE) from **How To Web Dev** on youtube to get started.
+Followed this [tutorial video](https://www.youtube.com/watch?v=12ZeRqf5CQE) from **How To Web Dev** on youtube to get started, then added more things such as a navigation menu, blog, contact page, etc.
 
 ## Getting Started
 
