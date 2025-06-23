@@ -35,10 +35,10 @@ export default function Home() {
             <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
               Home
             </Link>
-            <Link href="/blog" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
+            <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
               Blog
             </Link>
-            <Link href="/contact" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
+            <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
               Contact
             </Link>
           </nav>
@@ -55,10 +55,10 @@ export default function Home() {
                 <Link href="/">Home</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/blog">Blog</Link>
+                <Link href="/">Blog</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/contact">Contact</Link>
+                <Link href="/">Contact</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
