@@ -116,6 +116,24 @@ export default function Home() {
             <div className="space-y-8">
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">Oct 2024 - Jul 2025</p>
+                  <p className="font-medium">Undergraduate Research Assistant</p>
+                  <p className="text-blue-600 dark:text-blue-400">Western Michigan University</p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                <ul className="list-disc list-inside marker:text-indigo-600 space-y-2">
+                  <li>Contributed to multiple research projects on emerging technologies in collaboration with WMED School and partner institutions.</li>
+                  <li><strong>AR/MR Research:</strong> Developed a heart-anatomy lab prototype using augmented/mixed reality alongside WMED students and faculty.</li>
+                  <li><strong>AI/LLM Research:</strong> Built an SMS system via Africa’s Talking to give the Ogiek community resource access—featuring preset menus and an LLM-powered RAG engine for custom queries.</li>
+                </ul>
+
+                </p>
+            </div>
+
+            <div className="space-y-8">
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">May 2024 - Feb 2025</p>
                   <p className="font-medium">IT Systems Engineering Intern/Co-op</p>
                   <p className="text-blue-600 dark:text-blue-400">Gentex Corporation</p>
