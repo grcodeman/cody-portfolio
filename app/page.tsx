@@ -7,8 +7,9 @@ import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaYoutube, FaBars } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export default function Home() {
   return (
@@ -17,8 +18,8 @@ export default function Home() {
 
         {/* PFP, Nav, Theme Toggle */}
         <motion.header 
-        initial={{opacity: 0, x: -100}}
-        animate={{opacity: 1, x:0}}
+        initial={{opacity: 0, y: -100}}
+        animate={{opacity: 1, y:0}}
         transition={{duration: 0.8}}
         
         className="flex items-center justify-between mb-12">
@@ -37,6 +38,25 @@ export default function Home() {
               Contact
             </Link>
           </nav>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="md:hidden">
+                <FaBars className="w-6 h-6" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent sideOffset={4} className="md:hidden">
+              <DropdownMenuItem asChild>
+                <Link href="/">Home</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/blog">Blog</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/contact">Contact</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           <ThemeToggle />
         </motion.header>
