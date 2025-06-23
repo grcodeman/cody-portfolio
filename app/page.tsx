@@ -3,6 +3,7 @@
 import Image from "next/image";
 import pfp from "../public/pfp.png";
 import atom from "../public/atom.png";
+import ogiek from "../public/ogiek.png";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
@@ -186,13 +187,31 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
                 <CardContent className="p-4">
+                  <Image src={ogiek} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
+
+                  <div className="flex items-center justify-between">
+
+                    <div>
+                      <h3 className="font-medium">Ogiek Messenger</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Python, Ollama, Langchain</p>
+                    </div>
+
+                    <Link href="https://sautiyaogiek.com/" target="_blank">
+                      <Button variant="ghost" size="icon">→</Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-4">
                   <Image src={atom} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
 
                   <div className="flex items-center justify-between">
 
                     <div>
                       <h3 className="font-medium">ATOM Medic</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Unity, Flutter, Firebase</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Unity, Flutter, Firebase, Hololens</p>
                     </div>
 
                     <Link href="https://wmich.edu/news/2023/05/71778" target="_blank">
@@ -201,6 +220,7 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+
             </div>
 
             <p className="text-gray-500">© 2025 Cody Thornell</p>
