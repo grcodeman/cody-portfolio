@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 
 export default function Home() {
   return (
