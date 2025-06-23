@@ -107,9 +107,9 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 <ul className="list-disc list-inside marker:text-indigo-600 space-y-1">
                   <li>Provided comprehensive IT support, troubleshooting and resolving issues related to computers, printers, projectors, and other tech equipment.</li>
-                  <li>Assisted in managing licensing servers and worked with computer imaging to ensure streamlined installations and software configurations.</li>
-                  <li>Utilized a ticket-based system for efficient task management, addressing both team and individual IT requirements.</li>
-                  <li>Developed basic scripts for system checks and actively contributed to the documentation of best practices on the company&apos;s internal wiki.</li>
+                  <li>Assisted in <strong>managing licensing servers</strong> and worked with computer imaging to ensure streamlined installations and software configurations.</li>
+                  <li>Utilized a <strong>ticket-based system</strong> for efficient task management, addressing both team and individual IT requirements.</li>
+                  <li>Developed basic scripts for <strong>system checks</strong> and actively contributed to the documentation of best practices on the company&apos;s internal wiki.</li>
                 </ul>
               </p>
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
                 <ul className="list-disc list-inside marker:text-indigo-600 space-y-1">
                   <li>Contributed to multiple research projects on emerging technologies in collaboration with WMED School and partner institutions.</li>
                   <li><strong>AR/MR Research:</strong> Developed a heart-anatomy lab prototype using augmented/mixed reality alongside WMED students and faculty.</li>
-                  <li><strong>AI/LLM Research:</strong> Built an SMS system via Africa’s Talking to give the Ogiek community resource access—featuring preset menus and an LLM-powered RAG engine for custom queries.</li>
+                  <li><strong>AI/LLM Research:</strong> Built an SMS system via Africa&apos;s Talking to give the Ogiek community resource access, featuring preset menus and an LLM-powered RAG engine for custom queries.</li>
                 </ul>
 
                 </p>
@@ -142,9 +142,9 @@ export default function Home() {
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 <ul className="list-disc list-inside marker:text-indigo-600 space-y-1">
-                  <li>Developed scripts and Power BI reports for multiple IT teams, enhancing operational efficiency and data analysis.</li>
-                  <li>Trained with the Oracle DBA team, performing DBA tasks on Oracle EBS systems via Linux and web interfaces, as well as assisting with database patching and cloning.</li>
-                  <li>Engineered scripts and queries using Bash, SQL, PL/SQL, and Python for Linux maintenance and IT reporting needs.</li>
+                  <li><strong>Developed scripts</strong> and <strong>Power BI reports</strong> for multiple IT teams, enhancing operational efficiency and data analysis.</li>
+                  <li>Trained with the Oracle DBA team, performing DBA tasks on <strong>Oracle EBS</strong> systems via <strong>Linux</strong> and web interfaces, as well as assisting with database patching and cloning.</li>
+                  <li>Engineered scripts and queries using <strong>Bash, SQL, PL/SQL, and Python</strong> for Linux maintenance and IT reporting needs.</li>
                   <li>Collaborated with cross-functional teams and responded to system requests, gaining expertise in Oracle EBS systems and improving communication skills.</li>
                 </ul>
               </p>
