@@ -30,12 +30,13 @@ export default function Home() {
           <NavigationMenu>
             <NavigationMenuList className="space-x-4">
               <NavigationMenuItem>
-                <NavigationMenuItem asChild>
+                <NavigationMenuLink asChild>
                   <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
                     Home
                   </Link>
-                </NavigationMenuItem>
+                </NavigationMenuLink>
               </NavigationMenuItem>
+              
             </NavigationMenuList>
           </NavigationMenu>
 
