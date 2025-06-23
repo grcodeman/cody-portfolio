@@ -16,7 +16,7 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
       <div className="mx-auto max-w-xl px-4 py-20">
 
-        {/* PFP and Theme Toggle */}
+        {/* PFP, Nav, Theme Toggle */}
         <motion.header 
         initial={{opacity: 0, x: -100}}
         animate={{opacity: 1, x:0}}
@@ -26,6 +26,19 @@ export default function Home() {
           <div className="w-20 h-20 rounded-full overflow-hidden">
             <Image src={pfp} alt="profile picture" className="cursor-pointer transition-all duration-300 hover:scale-110"></Image>
           </div>
+
+          <NavigationMenu>
+            <NavigationMenuList className="space-x-4">
+              <NavigationMenuItem>
+                <NavigationMenuItem asChild>
+                  <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800">
+                    Home
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <ThemeToggle />
         </motion.header>
 
