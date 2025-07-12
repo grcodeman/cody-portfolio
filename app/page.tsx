@@ -294,7 +294,7 @@ export default function Home() {
                 </Card>
               </Link>
 
-              <Link href="https://shelfapp.io/" target="_blank" className="block">
+              <Link href="https://www.shelfapp.io/" target="_blank" className="block">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
                     <Image src={shelf} alt="Image of Shelf Inventory, an app for restaurant inventory management." className="rounded-lg mb-4"/>
