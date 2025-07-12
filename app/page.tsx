@@ -5,6 +5,7 @@ import pfp from "../public/pfp.png";
 import atom from "../public/atom.png";
 import ogiek from "../public/ogiek.png";
 import darts from "../public/darts.png";
+import dsc from "../public/dsc.png";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
@@ -273,6 +274,19 @@ export default function Home() {
                     <div>
                       <h3 className="font-medium">ATOM Medic</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Unity, Flutter, Firebase, Hololens</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href="https://github.com/grcodeman/dsc-website-fork" target="_blank" className="block">
+                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                  <CardContent className="p-4">
+                    <Image src={dsc} alt="Image of Data Science Club Website landing page." className="rounded-lg mb-4"/>
+
+                    <div>
+                      <h3 className="font-medium">DSC Website</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Next.js, TypeScript, Tailwind CSS</p>
                     </div>
                   </CardContent>
                 </Card>
