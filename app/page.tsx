@@ -7,6 +7,7 @@ import ogiek from "../public/projects/ogiek.png";
 import darts from "../public/projects/darts.png";
 import dsc from "../public/projects/dsc.png";
 import shelf from "../public/projects/shelf.png";
+import w1 from "../public/projects/w1.png";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
@@ -301,6 +302,19 @@ export default function Home() {
                     <div>
                       <h3 className="font-medium">Shelf Inventory</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Flutter, Firebase, Dart</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href="https://github.com/grcodeman/w1-website-fork" target="_blank" className="block">
+                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                  <CardContent className="p-4">
+                    <Image src={w1} alt="Image of W1 Website landing page." className="rounded-lg mb-4"/>
+
+                    <div>
+                      <h3 className="font-medium">W1 Website</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Next.js, TypeScript, Tailwind CSS</p>
                     </div>
                   </CardContent>
                 </Card>
