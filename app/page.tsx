@@ -143,14 +143,12 @@ export default function Home() {
                   <p className="text-blue-600 dark:text-blue-400">WMU CAE Center</p>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                <ul className="list-disc list-inside marker:text-indigo-600 space-y-1">
+                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
                   <li>Provided comprehensive IT support, troubleshooting and resolving issues related to computers, printers, projectors, and other tech equipment.</li>
                   <li>Assisted in <strong>managing licensing servers</strong> and worked with computer imaging to ensure streamlined installations and software configurations.</li>
                   <li>Utilized a <strong>ticket-based system</strong> for efficient task management, addressing both team and individual IT requirements.</li>
                   <li>Developed basic scripts for <strong>system checks</strong> and actively contributed to the documentation of best practices on the company&apos;s internal wiki.</li>
                 </ul>
-              </p>
             </div>
 
             <div className="space-y-8">
@@ -161,14 +159,11 @@ export default function Home() {
                   <p className="text-blue-600 dark:text-blue-400">Western Michigan University</p>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                <ul className="list-disc list-inside marker:text-indigo-600 space-y-1">
-                  <li>Contributed to multiple research projects on emerging technologies in collaboration with WMED School and partner institutions.</li>
-                  <li><strong>AR/MR Research:</strong> Developed a heart-anatomy lab prototype using augmented/mixed reality alongside WMED students and faculty.</li>
-                  <li><strong>AI/LLM Research:</strong> Built an SMS system via Africa&apos;s Talking to give the Ogiek community resource access, featuring preset menus and an LLM-powered RAG engine for custom queries.</li>
-                </ul>
-
-                </p>
+              <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
+                <li>Contributed to multiple research projects on emerging technologies in collaboration with WMED School and partner institutions.</li>
+                <li><strong>AR/MR Research:</strong> Developed a heart-anatomy lab prototype using augmented/mixed reality alongside WMED students and faculty.</li>
+                <li><strong>AI/LLM Research:</strong> Built an SMS system via Africa&apos;s Talking to give the Ogiek community resource access, featuring preset menus and an LLM-powered RAG engine for custom queries.</li>
+              </ul>
             </div>
 
             <div className="space-y-8">
@@ -179,14 +174,12 @@ export default function Home() {
                   <p className="text-blue-600 dark:text-blue-400">Gentex Corporation</p>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                <ul className="list-disc list-inside marker:text-indigo-600 space-y-1">
+                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
                   <li><strong>Developed scripts</strong> and <strong>Power BI reports</strong> for multiple IT teams, enhancing operational efficiency and data analysis.</li>
                   <li>Trained with the Oracle DBA team, performing DBA tasks on <strong>Oracle EBS</strong> systems via <strong>Linux</strong> and web interfaces, as well as assisting with database patching and cloning.</li>
                   <li>Engineered scripts and queries using <strong>Bash, SQL, PL/SQL, and Python</strong> for Linux maintenance and IT reporting needs.</li>
                   <li>Collaborated with cross-functional teams and responded to system requests, gaining expertise in Oracle EBS systems and improving communication skills.</li>
                 </ul>
-              </p>
             </div>
           </motion.section>
 
@@ -245,41 +238,31 @@ export default function Home() {
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                <CardContent className="p-4">
-                  <Image src={ogiek} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
-
-                  <div className="flex items-center justify-between">
+              <Link href="https://sautiyaogiek.com/" target="_blank" className="block">
+                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                  <CardContent className="p-4">
+                    <Image src={ogiek} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
 
                     <div>
                       <h3 className="font-medium">Ogiek Messenger</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Python, Ollama, Langchain</p>
                     </div>
+                  </CardContent>
+                </Card>
+              </Link>
 
-                    <Link href="https://sautiyaogiek.com/" target="_blank">
-                      <Button variant="ghost" size="icon">→</Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                <CardContent className="p-4">
-                  <Image src={atom} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
-
-                  <div className="flex items-center justify-between">
+              <Link href="https://wmich.edu/news/2023/05/71778" target="_blank" className="block">
+                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                  <CardContent className="p-4">
+                    <Image src={atom} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
 
                     <div>
                       <h3 className="font-medium">ATOM Medic</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Unity, Flutter, Firebase, Hololens</p>
                     </div>
-
-                    <Link href="https://wmich.edu/news/2023/05/71778" target="_blank">
-                      <Button variant="ghost" size="icon">→</Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </Link>
 
             </div>
 
