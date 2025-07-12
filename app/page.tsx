@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import pfp from "../public/pfp.png";
-import atom from "../public/atom.png";
-import ogiek from "../public/ogiek.png";
-import darts from "../public/darts.png";
-import dsc from "../public/dsc.png";
-import shelf from "../public/shelf.png";
+import atom from "../public/projects/atom.png";
+import ogiek from "../public/projects/ogiek.png";
+import darts from "../public/projects/darts.png";
+import dsc from "../public/projects/dsc.png";
+import shelf from "../public/projects/shelf.png";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
