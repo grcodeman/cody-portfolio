@@ -106,7 +106,7 @@ export default function Home() {
 
           className="flex items-center gap-3"
           >
-            <Button className="rounded-full bg-gradient-to-r from-rose-600 to-indigo-600 text-white transition-transform hover:scale-105">Resume</Button>
+           {/*} <Button className="rounded-full bg-gradient-to-r from-rose-600 to-indigo-600 text-white transition-transform hover:scale-105">Resume</Button> */}
 
             <Link href="https://github.com/grcodeman" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
               <FaGithub className="w-6 h-6"></FaGithub>
