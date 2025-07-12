@@ -248,7 +248,7 @@ export default function Home() {
 
                     <div>
                       <h3 className="font-medium">Ogiek Messenger</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Python, Ollama, Langchain</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Python, Ollama, Langchain, SMS</p>
                     </div>
                   </CardContent>
                 </Card>
