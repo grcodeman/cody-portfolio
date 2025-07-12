@@ -4,6 +4,7 @@ import Image from "next/image";
 import pfp from "../public/pfp.png";
 import atom from "../public/atom.png";
 import ogiek from "../public/ogiek.png";
+import darts from "../public/darts.png";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
@@ -246,6 +247,19 @@ export default function Home() {
                     <div>
                       <h3 className="font-medium">Ogiek Messenger</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Python, Ollama, Langchain</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href="https://github.com/grcodeman/sprintdev-partygames" target="_blank" className="block">
+                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                  <CardContent className="p-4">
+                    <Image src={darts} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
+
+                    <div>
+                      <h3 className="font-medium">Minecraft Darts</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Hackathon, Java, Minecraft</p>
                     </div>
                   </CardContent>
                 </Card>
