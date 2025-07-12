@@ -238,7 +238,7 @@ export default function Home() {
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <Link href="https://sautiyaogiek.com/" target="_blank" className="block">
+              <Link href="https://github.com/grcodeman/sautiyaogiek" target="_blank" className="block">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
                     <Image src={ogiek} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
@@ -251,7 +251,7 @@ export default function Home() {
                 </Card>
               </Link>
 
-              <Link href="https://wmich.edu/news/2023/05/71778" target="_blank" className="block">
+              <Link href="https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view" target="_blank" className="block">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
                     <Image src={atom} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
