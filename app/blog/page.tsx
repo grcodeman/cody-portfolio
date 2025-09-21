@@ -2,6 +2,7 @@
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { motion } from 'framer-motion';
 
 export default function Blog() {
   return (
@@ -12,6 +13,13 @@ export default function Blog() {
         <Header />
         
         <main className="space-y-10">
+          <motion.section
+          initial={{opacity: 0, y: 100}}
+          animate={{opacity: 1, y:0}}
+          transition={{duration: 0.8}}
+          
+          className="space-y-8"
+          >
           <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block mb-8">
             Blog
           </h1>
@@ -23,6 +31,8 @@ export default function Blog() {
             
             {/* Add your blog content here */}
           </div>
+
+          </motion.section>
           
           {/* Footer Section */}
           <Footer />
