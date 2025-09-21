@@ -34,7 +34,7 @@ export default function Contact() {
               method="POST"
             >
               <div>
-                <label htmlFor="email">Your email:</label>
+                <label htmlFor="email">Email:</label>
                 <input 
                   type="email" 
                   name="email" 
@@ -44,7 +44,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="name">Your name:</label>
+                <label htmlFor="name">Name:</label>
                 <input 
                   type="text" 
                   name="name" 
@@ -54,11 +54,11 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message">Your message:</label>
+                <label htmlFor="message">Message:</label>
                 <textarea 
                   name="message" 
                   id="message"
-                  placeholder="Tell me about your project or just say hello!"
+                  placeholder="Your message here"
                   required
                 ></textarea>
               </div>
