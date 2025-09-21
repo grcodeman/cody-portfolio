@@ -17,11 +17,43 @@ export default function Contact() {
           </h1>
           
           <div className="space-y-6">
-            <p className="text-gray-600 dark:text-gray-400">
-              Contact information and form coming soon.
-            </p>
-            
-            {/* Add your contact content here */}
+          
+            <form
+              className="contact-form"
+              action="https://formspree.io/f/mjkabbwk"
+              method="POST"
+            >
+              <div>
+                <label htmlFor="email">Your email:</label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  id="email"
+                  placeholder="your.email@example.com"
+                  required 
+                />
+              </div>
+              <div>
+                <label htmlFor="name">Your name:</label>
+                <input 
+                  type="text" 
+                  name="name" 
+                  id="name"
+                  placeholder="Your full name"
+                  required 
+                />
+              </div>
+              <div>
+                <label htmlFor="message">Your message:</label>
+                <textarea 
+                  name="message" 
+                  id="message"
+                  placeholder="Tell me about your project or just say hello!"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
           </div>
           
           {/* Footer Section */}
