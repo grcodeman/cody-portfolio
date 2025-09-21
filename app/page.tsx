@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import pfp from "../public/pfp.png";
 import atom from "../public/projects/atom.png";
 import ogiek from "../public/projects/ogiek.png";
 import darts from "../public/projects/darts.png";
@@ -9,7 +8,6 @@ import dsc from "../public/projects/dsc.png";
 import shelf from "../public/projects/shelf.png";
 import w1 from "../public/projects/w1.png";
 import { motion } from 'framer-motion';
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
