@@ -120,3 +120,58 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Contact Form Styles */
+@layer components {
+  .contact-form {
+    @apply space-y-6;
+  }
+  
+  .contact-form label {
+    @apply block text-sm font-medium text-foreground mb-2;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    @apply w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground 
+           placeholder:text-muted-foreground focus:outline-none focus:ring-2 
+           focus:ring-ring focus:border-transparent transition-all duration-200
+           hover:border-ring/50;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    @apply shadow-lg shadow-ring/10;
+  }
+  
+  .contact-form textarea {
+    @apply min-h-[120px] max-h-[300px] resize-y;
+  }
+  
+  .contact-form button[type="submit"] {
+    @apply w-full px-6 py-3 rounded-lg font-medium text-primary-foreground
+           bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500
+           hover:from-rose-700 hover:via-indigo-600 hover:to-sky-600
+           focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 
+           focus:ring-offset-background transition-all duration-200
+           transform hover:scale-[1.02] active:scale-[0.98]
+           shadow-lg hover:shadow-xl;
+  }
+  
+  .contact-form button[type="submit"]:disabled {
+    @apply opacity-50 cursor-not-allowed hover:scale-100;
+  }
+}
+
+/* Dark mode specific enhancements */
+@layer components {
+  .dark .contact-form input,
+  .dark .contact-form textarea {
+    @apply bg-input/50 backdrop-blur-sm;
+  }
+  
+  .dark .contact-form input:focus,
+  .dark .contact-form textarea:focus {
+    @apply bg-input/70;
+  }
+}

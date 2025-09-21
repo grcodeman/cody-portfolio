@@ -1,20 +1,18 @@
 "use client"
 
 import Image from "next/image";
-import pfp from "../public/pfp.png";
 import atom from "../public/projects/atom.png";
 import ogiek from "../public/projects/ogiek.png";
 import darts from "../public/projects/darts.png";
 import dsc from "../public/projects/dsc.png";
 import shelf from "../public/projects/shelf.png";
 import w1 from "../public/projects/w1.png";
-import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from 'framer-motion';
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin, FaYoutube, FaBars } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -22,55 +20,13 @@ export default function Home() {
       <div className="mx-auto max-w-xl px-4 py-20">
 
         {/* Header Section */}
-        <motion.header 
-        initial={{opacity: 0, y: -100}}
-        animate={{opacity: 1, y:0}}
-        transition={{duration: 0.8}}
-        
-        className="flex items-center justify-between mb-12">
-
-          {/* PFP */}
-          <div className="w-20 h-20 rounded-full overflow-hidden">
-            <Image src={pfp} alt="profile picture" className="cursor-pointer transition-all duration-300 hover:scale-110"></Image>
-          </div>
-
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-4">
-            <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800 hover:scale-105">
-              Home
-            </Link>
-            <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800 hover:scale-105">
-              Blog
-            </Link>
-            <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800 hover:scale-105">
-              Contact
-            </Link>
-          </nav>
-
-          {/* Mobile Nav */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="md:hidden">
-                <FaBars className="w-6 h-6" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent sideOffset={4} className="md:hidden">
-              <DropdownMenuItem asChild>
-                <Link href="/">Home</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/">Blog</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/">Contact</Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          {/* Theme Button */}
-          <ThemeToggle />
-
-        </motion.header>
+        <motion.div
+          initial={{opacity: 0, y: -100}}
+          animate={{opacity: 1, y:0}}
+          transition={{duration: 0.8}}
+        >
+          <Header />
+        </motion.div>
 
         <main className="space-y-10">
 
@@ -327,13 +283,7 @@ export default function Home() {
           </motion.section>
 
           {/* Footer Section */}
-          <div className="text-center space-y-2">
-              <p className="text-gray-500 text-sm">
-                This site uses Microsoft Clarity for analytics and heatmaps to improve user experience. 
-                View <Link href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline">Microsoft&apos;s Privacy Statement</Link>.
-              </p>
-              <p className="text-gray-500">© 2025 Cody Thornell</p>
-          </div>
+          <Footer />
 
         </main>
 
