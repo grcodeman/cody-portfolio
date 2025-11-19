@@ -53,8 +53,8 @@ export default function Home() {
           className="space-y-3"
           >
             <h2 className="text-lg font-semibold">IT and Software Developer</h2>
-            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Experienced developer with a multitude of software projects and IT experience. My skillsets range from coding languages like <span className="text-black dark:text-white">Python, Typescript, Dart</span> to managing systems such as <span className="text-black dark:text-white">Linux Servers and Oracle EBS</span>.</p>
-            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Beyond software development and IT work, I love building side projects and am passionate for learning more about startups.</p>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Experienced developer with a multitude of software projects and IT experience. My skillsets range from coding languages like <span className="text-black dark:text-white">Python, Bash, Typescript, Dart</span> to managing systems such as <span className="text-black dark:text-white">Active Directory, Linux Servers and Oracle EBS</span>.</p>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Beyond software development and IT work, I love building side projects and am passionate in learning more about the business side of technology.</p>
           </motion.div>
 
           {/* Resume and Socials */}
