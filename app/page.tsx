@@ -53,8 +53,8 @@ export default function Home() {
           className="space-y-3"
           >
             <h2 className="text-lg font-semibold">IT and Software Developer</h2>
-            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Experienced developer with a multitude of software projects and IT experience. My skillsets range from coding languages like <span className="text-black dark:text-white">Python, Typescript, Dart</span> to managing systems such as <span className="text-black dark:text-white">Linux Servers and Oracle EBS</span>.</p>
-            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Beyond software development and IT work, I love building side projects and am passionate for learning more about startups.</p>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Experienced developer with a multitude of software projects and IT experience. My skillsets range from coding languages like <span className="text-black dark:text-white">Python, Bash, Typescript, Dart</span> to managing systems such as <span className="text-black dark:text-white">Active Directory, Linux Servers and Oracle EBS</span>.</p>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Beyond software development and IT work, I love building side projects and am passionate in learning more about the business side of technology.</p>
           </motion.div>
 
           {/* Resume and Socials */}
@@ -98,7 +98,23 @@ export default function Home() {
             <div className="space-y-8">
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">May 2023 - Present</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">Aug 2025 - Present</p>
+                  <p className="font-medium">IT Graduate Manager</p>
+                  <p className="text-blue-600 dark:text-blue-400">WMU CAE Center</p>
+                </div>
+              </div>
+                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
+                  <li>Working under the IT Director to <strong>manage a team of 12+ students</strong> in facilitating IT operations and internal software development, overseeing the College of Engineering and Applied Sciences.</li>
+                  <li>Managing workflows for <strong>Image Deployment, Support Ticketing, Server Room Administration, and Software Development</strong>.</li>
+                  <li>Assisting in leading a campus wide <strong>rollout of Active Directory and Group Policies across 300+ endpoints</strong>.</li>
+                  <li>Handling timesheets and payroll coordination, overseeing student employment and scheduling, and hiring/training new staff.</li>
+                </ul>
+            </div>
+
+            <div className="space-y-8">
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">May 2023 - Aug 2025</p>
                   <p className="font-medium">IT System Administrator</p>
                   <p className="text-blue-600 dark:text-blue-400">WMU CAE Center</p>
                 </div>
