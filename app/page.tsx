@@ -13,11 +13,13 @@ import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import HyperspaceCanvas from "../components/HyperspaceCanvas";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
-      <div className="mx-auto max-w-xl px-4 py-20">
+      <HyperspaceCanvas isActive={true} />
+      <div className="mx-auto max-w-xl px-4 py-20 relative z-10">
 
         {/* Header Section */}
         <motion.div
