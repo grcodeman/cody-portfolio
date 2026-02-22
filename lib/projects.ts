@@ -96,6 +96,7 @@ export const projects: Project[] = [
     image: "/projects/darts.png",
     links: [{ label: "GitHub", url: "https://github.com/grcodeman/sprintdev-partygames" }],
     featured: false,
+    award: "1st Place - sprint.dev 2025",
   },
   {
     slug: "dsc-website",
