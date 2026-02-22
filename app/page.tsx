@@ -174,7 +174,7 @@ export default function Home() {
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2025 - Exp May 2027</p>
                   <p className="Font Medium">MBA Admitted</p>
-                  <p className="text-blue-600 dark:text-blue-400">Western Michigan Univeristy</p>
+                  <p className="text-blue-600 dark:text-blue-400">Western Michigan University</p>
                 </div>
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function Home() {
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Aug 2022 - Apr 2025</p>
                   <p className="Font Medium">B.S. Computer Science</p>
-                  <p className="text-blue-600 dark:text-blue-400">Western Michigan Univeristy</p>
+                  <p className="text-blue-600 dark:text-blue-400">Western Michigan University</p>
                 </div>
               </div>
             </div>
