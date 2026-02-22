@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
-      <div className="mx-auto max-w-4xl px-4 py-20">
+      <div className="mx-auto max-w-xl px-4 py-20">
         <Header />
 
         <main className="space-y-10">
@@ -42,7 +42,7 @@ export default function ProjectsPage() {
               onChange={(cat) => setActiveCategory(cat)}
             />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {filtered.map((project) => (
                 <ProjectCard
                   key={project.slug}
