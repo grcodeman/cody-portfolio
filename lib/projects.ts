@@ -117,6 +117,7 @@ export const projects: Project[] = [
     image: "/projects/shelf.png",
     links: [{ label: "Live Site", url: "https://www.shelfapp.io/" }],
     featured: false,
+    award: "2 Pitch Awards",
   },
   {
     slug: "w1-website",
