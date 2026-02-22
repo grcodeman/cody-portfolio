@@ -21,25 +21,27 @@ export default function ProjectModal({
       <DialogContent className="bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 sm:max-w-xl max-h-[90vh] overflow-y-auto p-0">
         {project && (
           <>
-            <div className="relative w-full aspect-video bg-zinc-800">
+            <div className="relative w-full">
               <Image
                 src={project.image}
                 alt={project.title}
-                fill
-                className="object-cover"
+                width={600}
+                height={400}
+                className="w-full h-auto"
                 sizes="(max-width: 640px) 100vw, 560px"
               />
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white dark:from-zinc-900 to-transparent" />
               {project.award && (
                 <div className="absolute top-3 right-3 bg-yellow-500/90 text-black text-xs font-semibold px-2 py-1 rounded-full">
                   {"🏆 " + project.award}
                 </div>
               )}
-            </div>
-
-            <div className="px-6 pb-6 pt-2 space-y-4">
-              <DialogTitle className="text-2xl font-bold text-black dark:text-white">
+              <DialogTitle className="absolute bottom-2 left-6 text-2xl font-bold text-black dark:text-white">
                 {project.title}
               </DialogTitle>
+            </div>
+
+            <div className="px-6 pb-6 space-y-4">
 
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((t) => (
