@@ -159,6 +159,7 @@ export const projects: Project[] = [
     image: "/projects/flightbrief-ai.svg",
     links: [{ label: "GitHub", url: "https://github.com/grcodeman/localhost-flightbriefai" }],
     featured: false,
+    award: "Top 5 - Localhost 2025",
   },
   {
     slug: "hackwmu-2024",
