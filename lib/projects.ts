@@ -58,7 +58,7 @@ export const projects: Project[] = [
     description:
       "Heart-anatomy lab prototype using augmented/mixed reality with Unity, Flutter, and HoloLens.",
     tech: ["Unity", "Flutter", "Firebase", "Hololens"],
-    categories: ["AR/VR"],
+    categories: ["Mobile", "AR/VR"],
     image: "/projects/atom.png",
     links: [{ label: "Presentation", url: "https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view" }],
     featured: true,
