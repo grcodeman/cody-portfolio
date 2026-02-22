@@ -1,7 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -16,6 +17,14 @@ export default function ProjectModal({
   project: Project | null;
   onClose: () => void;
 }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [project]);
+
+  const hasMultiple = project ? project.images.length > 1 : false;
+
   return (
     <Dialog open={!!project} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 sm:max-w-xl max-h-[90vh] overflow-y-auto p-0">
@@ -23,7 +32,7 @@ export default function ProjectModal({
           <>
             <div className="relative w-full">
               <Image
-                src={project.image}
+                src={project.images[currentIndex]}
                 alt={project.title}
                 width={600}
                 height={400}
@@ -36,10 +45,45 @@ export default function ProjectModal({
                   {"🏆 " + project.award}
                 </div>
               )}
+              {hasMultiple && (
+                <>
+                  <button
+                    onClick={() => setCurrentIndex((i) => (i - 1 + project.images.length) % project.images.length)}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft className="size-5" />
+                  </button>
+                  <button
+                    onClick={() => setCurrentIndex((i) => (i + 1) % project.images.length)}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight className="size-5" />
+                  </button>
+                </>
+              )}
               <DialogTitle className="absolute bottom-2 left-6 text-2xl font-bold text-black dark:text-white">
                 {project.title}
               </DialogTitle>
             </div>
+
+            {hasMultiple && (
+              <div className="flex justify-center gap-1.5 -mt-2 mb-1">
+                {project.images.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentIndex(i)}
+                    className={`size-2 rounded-full transition-colors ${
+                      i === currentIndex
+                        ? "bg-gray-800 dark:bg-gray-200"
+                        : "bg-gray-300 dark:bg-gray-600"
+                    }`}
+                    aria-label={`Go to image ${i + 1}`}
+                  />
+                ))}
+              </div>
+            )}
 
             <div className="px-6 pb-6 space-y-4">
 

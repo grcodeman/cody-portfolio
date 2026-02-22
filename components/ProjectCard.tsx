@@ -21,7 +21,7 @@ export default function ProjectCard({
         )}
         <CardContent className="p-4">
           <Image
-            src={project.image}
+            src={project.images[0]}
             alt={project.title}
             width={600}
             height={400}
