@@ -6,10 +6,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectFilter from "@/components/ProjectFilter";
 import ProjectCard from "@/components/ProjectCard";
-import { projects, type Category } from "@/lib/projects";
+import ProjectModal from "@/components/ProjectModal";
+import { projects, type Category, type Project } from "@/lib/projects";
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filtered =
     activeCategory === "All"
@@ -42,7 +44,11 @@ export default function ProjectsPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filtered.map((project) => (
-                <ProjectCard key={project.slug} project={project} />
+                <ProjectCard
+                  key={project.slug}
+                  project={project}
+                  onClick={() => setSelectedProject(project)}
+                />
               ))}
             </div>
 
@@ -51,6 +57,11 @@ export default function ProjectsPage() {
           <Footer />
         </main>
       </div>
+
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </div>
   );
 }

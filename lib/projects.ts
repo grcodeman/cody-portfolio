@@ -1,3 +1,8 @@
+export type ProjectLink = {
+  label: string;
+  url: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -5,7 +10,7 @@ export type Project = {
   tech: string[];
   categories: string[];
   image: string;
-  link: string;
+  links: ProjectLink[];
   featured: boolean;
   award?: string;
 };
@@ -32,7 +37,7 @@ export const projects: Project[] = [
     tech: ["RAG", "Python", "AI"],
     categories: ["AI/ML"],
     image: "/projects/nasa-bioexplorer.png",
-    link: "https://github.com/grcodeman/nasa-space-bio",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/nasa-space-bio" }],
     featured: true,
   },
   {
@@ -43,7 +48,7 @@ export const projects: Project[] = [
     tech: ["Python"],
     categories: ["Hackathon"],
     image: "/projects/mwc3-python.png",
-    link: "https://github.com/grcodeman/mwc3-python",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/mwc3-python" }],
     featured: true,
     award: "1st Place - MWC3 2024",
   },
@@ -55,7 +60,7 @@ export const projects: Project[] = [
     tech: ["Unity", "Flutter", "Firebase", "Hololens"],
     categories: ["AR/VR"],
     image: "/projects/atom.png",
-    link: "https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view",
+    links: [{ label: "Presentation", url: "https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view" }],
     featured: true,
   },
   {
@@ -65,7 +70,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "Tailwind CSS"],
     categories: ["Web Dev"],
     image: "/projects/cultivate269.png",
-    link: "https://cultivate269.com/",
+    links: [{ label: "Live Site", url: "https://cultivate269.com/" }],
     featured: true,
   },
 
@@ -78,7 +83,7 @@ export const projects: Project[] = [
     tech: ["Python", "Ollama", "Langchain", "SMS"],
     categories: ["AI/ML"],
     image: "/projects/ogiek.png",
-    link: "https://github.com/grcodeman/sautiyaogiek",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/sautiyaogiek" }],
     featured: false,
   },
   {
@@ -89,7 +94,7 @@ export const projects: Project[] = [
     tech: ["Java", "Minecraft"],
     categories: ["Hackathon"],
     image: "/projects/darts.png",
-    link: "https://github.com/grcodeman/sprintdev-partygames",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/sprintdev-partygames" }],
     featured: false,
   },
   {
@@ -99,7 +104,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     categories: ["Web Dev"],
     image: "/projects/dsc.png",
-    link: "https://github.com/grcodeman/dsc-website-fork",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/dsc-website-fork" }],
     featured: false,
   },
   {
@@ -109,7 +114,7 @@ export const projects: Project[] = [
     tech: ["Flutter", "Firebase", "Dart"],
     categories: ["Mobile"],
     image: "/projects/shelf.png",
-    link: "https://www.shelfapp.io/",
+    links: [{ label: "Live Site", url: "https://www.shelfapp.io/" }],
     featured: false,
   },
   {
@@ -119,7 +124,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     categories: ["Web Dev"],
     image: "/projects/w1.png",
-    link: "https://github.com/grcodeman/w1-website-fork",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/w1-website-fork" }],
     featured: false,
   },
   {
@@ -130,7 +135,7 @@ export const projects: Project[] = [
     tech: ["Lovable", "React"],
     categories: ["Web Dev", "Hackathon"],
     image: "/projects/ecoclean.png",
-    link: "https://clean-cloud-karma.lovable.app/",
+    links: [{ label: "Live Site", url: "https://clean-cloud-karma.lovable.app/" }],
     featured: false,
   },
   {
@@ -140,7 +145,7 @@ export const projects: Project[] = [
     tech: ["HTML", "CSS", "JavaScript"],
     categories: ["IT Tools", "Web Dev"],
     image: "/projects/cae-bucks.png",
-    link: "",
+    links: [],
     featured: false,
   },
   {
@@ -151,7 +156,7 @@ export const projects: Project[] = [
     tech: ["AI", "Python"],
     categories: ["AI/ML", "Hackathon"],
     image: "/projects/flightbrief.png",
-    link: "https://github.com/grcodeman/localhost-flightbriefai",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/localhost-flightbriefai" }],
     featured: false,
   },
   {
@@ -162,7 +167,7 @@ export const projects: Project[] = [
     tech: ["Flutter", "Dart"],
     categories: ["Hackathon"],
     image: "/projects/hackwmu-2024.png",
-    link: "",
+    links: [],
     featured: false,
     award: "1st Place - HackWMU 2024",
   },
@@ -173,7 +178,7 @@ export const projects: Project[] = [
     tech: ["Python", "ML"],
     categories: ["AI/ML"],
     image: "/projects/nfl-ml.png",
-    link: "https://github.com/grcodeman/cs5821-nfl",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/cs5821-nfl" }],
     featured: false,
   },
   {
@@ -183,7 +188,7 @@ export const projects: Project[] = [
     tech: ["Python", "LLM"],
     categories: ["AI/ML"],
     image: "/projects/inventory-llm.png",
-    link: "https://github.com/grcodeman/inventory-llm",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/inventory-llm" }],
     featured: false,
   },
   {
@@ -193,7 +198,7 @@ export const projects: Project[] = [
     tech: ["Python"],
     categories: ["IT Tools"],
     image: "/projects/stilltasty.png",
-    link: "https://github.com/grcodeman/stilltasty-scraping",
+    links: [{ label: "GitHub", url: "https://github.com/grcodeman/stilltasty-scraping" }],
     featured: false,
   },
 ];
