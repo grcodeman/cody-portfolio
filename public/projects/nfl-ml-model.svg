@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a0a"/>
+      <stop offset="50%" stop-color="#102010"/>
+      <stop offset="100%" stop-color="#081208"/>
+    </linearGradient>
+    <linearGradient id="field8" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e67e22"/>
+      <stop offset="100%" stop-color="#f39c12"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg8)"/>
+  <!-- Field lines (subtle) -->
+  <g opacity="0.06" stroke="#27ae60" stroke-width="1">
+    <line x1="160" y1="80" x2="160" y2="420"/>
+    <line x1="280" y1="80" x2="280" y2="420"/>
+    <line x1="400" y1="80" x2="400" y2="420"/>
+    <line x1="520" y1="80" x2="520" y2="420"/>
+    <line x1="640" y1="80" x2="640" y2="420"/>
+    <line x1="100" y1="80" x2="700" y2="80"/>
+    <line x1="100" y1="420" x2="700" y2="420"/>
+  </g>
+  <!-- Football icon -->
+  <g transform="translate(400, 155)">
+    <ellipse cx="0" cy="0" rx="45" ry="28" fill="none" stroke="#e67e22" stroke-width="2.5" transform="rotate(-30)"/>
+    <!-- Laces -->
+    <line x1="-12" y1="-3" x2="12" y2="-3" stroke="#e67e22" stroke-width="1.5" transform="rotate(-30)" opacity="0.7"/>
+    <line x1="-6" y1="-8" x2="-6" y2="2" stroke="#e67e22" stroke-width="1" transform="rotate(-30)" opacity="0.5"/>
+    <line x1="0" y1="-8" x2="0" y2="2" stroke="#e67e22" stroke-width="1" transform="rotate(-30)" opacity="0.5"/>
+    <line x1="6" y1="-8" x2="6" y2="2" stroke="#e67e22" stroke-width="1" transform="rotate(-30)" opacity="0.5"/>
+  </g>
+  <!-- Data chart/graph element -->
+  <g transform="translate(400, 155)" opacity="0.15">
+    <polyline points="-60,30 -40,10 -20,25 0,-5 20,15 40,-15 60,5" fill="none" stroke="#e67e22" stroke-width="2"/>
+    <!-- Data points -->
+    <circle cx="-60" cy="30" r="3" fill="#e67e22"/>
+    <circle cx="-40" cy="10" r="3" fill="#e67e22"/>
+    <circle cx="-20" cy="25" r="3" fill="#e67e22"/>
+    <circle cx="0" cy="-5" r="3" fill="#e67e22"/>
+    <circle cx="20" cy="15" r="3" fill="#e67e22"/>
+    <circle cx="40" cy="-15" r="3" fill="#e67e22"/>
+    <circle cx="60" cy="5" r="3" fill="#e67e22"/>
+  </g>
+  <!-- Over/Under indicators -->
+  <g opacity="0.25" font-family="monospace" font-size="11">
+    <text x="180" y="110" fill="#27ae60">OVER ▲</text>
+    <text x="560" y="110" fill="#e74c3c">UNDER ▼</text>
+  </g>
+  <!-- Title -->
+  <text x="400" y="290" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="40" font-weight="800" fill="#ecf0f1">NFL Over/Under</text>
+  <text x="400" y="330" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="22" fill="url(#field8)" font-weight="300">ML Model</text>
+  <text x="400" y="365" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="14" fill="#6a8a5a" letter-spacing="3">PREDICTIVE ANALYTICS</text>
+  <rect x="320" y="388" width="160" height="1.5" rx="1" fill="#e67e22" opacity="0.25"/>
+  <text x="400" y="422" text-anchor="middle" font-family="monospace" font-size="13" fill="#7a8a5a">Python · ML · Scikit-learn</text>
+</svg>

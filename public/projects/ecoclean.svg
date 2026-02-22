@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a0f"/>
+      <stop offset="50%" stop-color="#0f2918"/>
+      <stop offset="100%" stop-color="#071510"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="100%" stop-color="#27ae60"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecf0f1"/>
+      <stop offset="100%" stop-color="#bdc3c7"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <!-- Scattered dots like particles -->
+  <g opacity="0.15">
+    <circle cx="120" cy="80" r="2" fill="#2ecc71"/>
+    <circle cx="680" cy="120" r="3" fill="#27ae60"/>
+    <circle cx="200" cy="400" r="2" fill="#2ecc71"/>
+    <circle cx="600" cy="380" r="2.5" fill="#27ae60"/>
+    <circle cx="350" cy="60" r="1.5" fill="#2ecc71"/>
+    <circle cx="500" cy="440" r="2" fill="#27ae60"/>
+    <circle cx="720" cy="300" r="1.5" fill="#2ecc71"/>
+    <circle cx="80" cy="250" r="2" fill="#2ecc71"/>
+  </g>
+  <!-- Recycling/eco circle icon -->
+  <g transform="translate(400, 170)" filter="url(#glow2)">
+    <!-- Three curved arrows in a circle -->
+    <path d="M0 -50 A50 50 0 0 1 43 25" fill="none" stroke="#2ecc71" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="43,25 50,10 35,15" fill="#2ecc71"/>
+    <path d="M43 25 A50 50 0 0 1 -43 25" fill="none" stroke="#27ae60" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="-43,25 -35,10 -50,15" fill="#27ae60"/>
+    <path d="M-43 25 A50 50 0 0 1 0 -50" fill="none" stroke="#1abc9c" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="0,-50 -12,-40 5,-40" fill="#1abc9c"/>
+    <!-- Leaf in center -->
+    <path d="M-8 8 C-8 -8, 0 -18, 12 -18 C12 -18, 8 -4, -2 8Z" fill="#2ecc71" opacity="0.8"/>
+    <line x1="-2" y1="8" x2="6" y2="-6" stroke="#0f2918" stroke-width="1" opacity="0.5"/>
+  </g>
+  <!-- Title -->
+  <text x="400" y="290" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="48" font-weight="700" fill="#2ecc71">EcoClean</text>
+  <text x="400" y="325" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="16" fill="#5a8a6a" letter-spacing="4">BRONCO SUSTAINABILITY CHALLENGE</text>
+  <!-- Bottom accent -->
+  <rect x="320" y="365" width="160" height="2" rx="1" fill="#2ecc71" opacity="0.3"/>
+  <text x="400" y="400" text-anchor="middle" font-family="monospace" font-size="13" fill="#4a7a5a">Lovable · React</text>
+  <!-- Corner leaf accents -->
+  <path d="M30 470 C30 450, 45 440, 60 450 C60 450, 50 460, 30 470Z" fill="#2ecc71" opacity="0.12"/>
+  <path d="M770 30 C770 50, 755 60, 740 50 C740 50, 750 40, 770 30Z" fill="#2ecc71" opacity="0.12"/>
+</svg>

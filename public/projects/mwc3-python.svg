@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1005"/>
+      <stop offset="50%" stop-color="#201808"/>
+      <stop offset="100%" stop-color="#0f0a02"/>
+    </linearGradient>
+    <linearGradient id="gold6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="50%" stop-color="#f0b800"/>
+      <stop offset="100%" stop-color="#d4a000"/>
+    </linearGradient>
+    <filter id="glow6">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg6)"/>
+  <!-- Radial glow behind trophy -->
+  <circle cx="400" cy="170" r="100" fill="#ffd700" opacity="0.04"/>
+  <circle cx="400" cy="170" r="60" fill="#ffd700" opacity="0.06"/>
+  <!-- Trophy icon -->
+  <g transform="translate(400, 155)" filter="url(#glow6)">
+    <!-- Cup body -->
+    <path d="M-30 -40 L-25 15 C-25 35, 25 35, 25 15 L30 -40Z" fill="none" stroke="#ffd700" stroke-width="2.5"/>
+    <!-- Handles -->
+    <path d="M-30 -30 C-50 -30, -50 5, -25 5" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.7"/>
+    <path d="M30 -30 C50 -30, 50 5, 25 5" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.7"/>
+    <!-- Base -->
+    <line x1="-8" y1="35" x2="8" y2="35" stroke="#ffd700" stroke-width="2"/>
+    <rect x="-18" y="40" width="36" height="6" rx="2" fill="none" stroke="#ffd700" stroke-width="2"/>
+    <!-- Star inside trophy -->
+    <polygon points="0,-18 5,-8 16,-8 8,0 10,12 0,5 -10,12 -8,0 -16,-8 -5,-8" fill="#ffd700" opacity="0.25"/>
+    <!-- #1 -->
+    <text x="0" y="-2" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#ffd700" opacity="0.6">1</text>
+  </g>
+  <!-- 1st Place badge -->
+  <rect x="320" y="238" width="160" height="28" rx="14" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="400" y="257" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffd700" letter-spacing="2">🏆 1ST PLACE</text>
+  <!-- Title -->
+  <text x="400" y="320" text-anchor="middle" font-family="'Courier New', monospace" font-size="46" font-weight="700" fill="#ecf0f1">MWC3 2024</text>
+  <text x="400" y="355" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="16" fill="#a09060" letter-spacing="3">CODING COMPETITION</text>
+  <rect x="330" y="380" width="140" height="1.5" rx="1" fill="#ffd700" opacity="0.25"/>
+  <text x="400" y="415" text-anchor="middle" font-family="monospace" font-size="13" fill="#8a7a50">Python</text>
+  <!-- Confetti-like decorations -->
+  <rect x="180" y="80" width="8" height="3" rx="1" fill="#ffd700" opacity="0.15" transform="rotate(30 184 81)"/>
+  <rect x="620" y="100" width="6" height="3" rx="1" fill="#ffd700" opacity="0.12" transform="rotate(-20 623 101)"/>
+  <rect x="250" y="420" width="7" height="3" rx="1" fill="#ffd700" opacity="0.1" transform="rotate(45 253 421)"/>
+  <rect x="580" y="400" width="5" height="3" rx="1" fill="#ffd700" opacity="0.12" transform="rotate(-35 582 401)"/>
+</svg>
