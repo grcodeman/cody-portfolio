@@ -20,21 +20,17 @@ export default function ProjectCard({
           </div>
         )}
         <CardContent className="p-4">
-          <div className="relative w-full aspect-video mb-4 rounded-lg overflow-hidden bg-zinc-800">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover rounded-lg"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
-          </div>
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={600}
+            height={400}
+            className="rounded-lg mb-4 w-full h-auto"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
           <div>
             <h3 className="font-medium">{project.title}</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">
-              {project.description}
-            </p>
-            <p className="text-xs text-gray-600 dark:text-gray-500 mt-2">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               {project.tech.join(", ")}
             </p>
           </div>
