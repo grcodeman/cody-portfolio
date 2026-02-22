@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0a00"/>
+      <stop offset="50%" stop-color="#2d1810"/>
+      <stop offset="100%" stop-color="#1a1205"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e8822a"/>
+      <stop offset="100%" stop-color="#f5a623"/>
+    </linearGradient>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg1)"/>
+  <!-- Subtle grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#f5a623" stroke-width="1"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#f5a623" stroke-width="1"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#f5a623" stroke-width="1"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#f5a623" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="500" stroke="#f5a623" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="500" stroke="#f5a623" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="500" stroke="#f5a623" stroke-width="1"/>
+  </g>
+  <!-- Decorative plant/seed growing icon -->
+  <g transform="translate(400, 180)" filter="url(#glow1)">
+    <path d="M0 40 C-10 20, -30 -10, -15 -40 C-5 -60, 5 -60, 15 -40 C30 -10, 10 20, 0 40Z" fill="none" stroke="#f5a623" stroke-width="2.5" opacity="0.8"/>
+    <path d="M0 40 C10 20, 30 -10, 15 -40 C5 -60, -5 -60, -15 -40 C-30 -10, -10 20, 0 40Z" fill="none" stroke="#e8822a" stroke-width="2.5" opacity="0.6" transform="rotate(60)"/>
+    <path d="M0 40 C10 20, 30 -10, 15 -40 C5 -60, -5 -60, -15 -40 C-30 -10, -10 20, 0 40Z" fill="none" stroke="#d4740e" stroke-width="2.5" opacity="0.4" transform="rotate(-60)"/>
+    <line x1="0" y1="40" x2="0" y2="80" stroke="#f5a623" stroke-width="2.5" opacity="0.6"/>
+    <circle cx="0" cy="0" r="6" fill="#f5a623" opacity="0.9"/>
+  </g>
+  <!-- Title -->
+  <text x="400" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="url(#accent1)">Cultivate 269</text>
+  <text x="400" y="345" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#c4956a" letter-spacing="3">ENTREPRENEURSHIP COMMUNITY</text>
+  <!-- Bottom bar -->
+  <rect x="300" y="380" width="200" height="2" rx="1" fill="url(#accent1)" opacity="0.4"/>
+  <text x="400" y="420" text-anchor="middle" font-family="monospace" font-size="13" fill="#8a7060">Next.js · Tailwind CSS</text>
+  <!-- Corner decorations -->
+  <path d="M0 0 L60 0 L0 60Z" fill="#f5a623" opacity="0.08"/>
+  <path d="M800 500 L740 500 L800 440Z" fill="#f5a623" opacity="0.08"/>
+</svg>
