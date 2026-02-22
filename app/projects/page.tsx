@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectFilter from "@/components/ProjectFilter";
-import ProjectCarousel from "@/components/ProjectCarousel";
+import ProjectCard from "@/components/ProjectCard";
 import { projects, type Category } from "@/lib/projects";
 
 export default function ProjectsPage() {
@@ -40,7 +40,11 @@ export default function ProjectsPage() {
               onChange={(cat) => setActiveCategory(cat)}
             />
 
-            <ProjectCarousel projects={filtered} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filtered.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
+            </div>
 
           </motion.section>
 
