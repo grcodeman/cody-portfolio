@@ -21,6 +21,9 @@ export default function Header() {
         <Link href="/" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800 hover:scale-105">
           Home
         </Link>
+        <Link href="/projects" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800 hover:scale-105">
+          Projects
+        </Link>
         <Link href="/blog" className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-800 hover:scale-105">
           Blog
         </Link>
@@ -39,6 +42,9 @@ export default function Header() {
         <DropdownMenuContent sideOffset={4} className="md:hidden">
           <DropdownMenuItem asChild>
             <Link href="/">Home</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href="/projects">Projects</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link href="/blog">Blog</Link>

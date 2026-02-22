@@ -1,18 +1,12 @@
 "use client"
 
-import Image from "next/image";
-import atom from "../public/projects/atom.png";
-import ogiek from "../public/projects/ogiek.png";
-import darts from "../public/projects/darts.png";
-import dsc from "../public/projects/dsc.png";
-import shelf from "../public/projects/shelf.png";
-import w1 from "../public/projects/w1.png";
 import { motion } from 'framer-motion';
 import Link from "next/link";
 import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { Card, CardContent } from "@/components/ui/card";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/lib/projects";
 
 export default function Home() {
   return (
@@ -208,93 +202,28 @@ export default function Home() {
           initial={{opacity: 0, y: 100}}
           animate={{opacity: 1, y:0}}
           transition={{duration: 0.8}}
-          
+
           className="space-y-8"
           >
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <Link href="https://github.com/grcodeman/sautiyaogiek" target="_blank" className="block">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
-                    <Image src={ogiek} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
-
-                    <div>
-                      <h3 className="font-medium">Ogiek Messenger</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Python, Ollama, Langchain, SMS</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="https://github.com/grcodeman/sprintdev-partygames" target="_blank" className="block">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
-                    <Image src={darts} alt="Image of minecraft mod for darts and badges for 1st Place Hackathon win." className="rounded-lg mb-4"/>
-
-                    <div>
-                      <h3 className="font-medium">Minecraft Darts</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Hackathon, Java, Minecraft</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view" target="_blank" className="block">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
-                    <Image src={atom} alt="Image of medical software for AR, Mobile and Desktop devices." className="rounded-lg mb-4"/>
-
-                    <div>
-                      <h3 className="font-medium">ATOM Medic</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Unity, Flutter, Firebase, Hololens</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="https://github.com/grcodeman/dsc-website-fork" target="_blank" className="block">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
-                    <Image src={dsc} alt="Image of Data Science Club Website landing page." className="rounded-lg mb-4"/>
-
-                    <div>
-                      <h3 className="font-medium">DSC Website</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Next.js, TypeScript, Tailwind CSS</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="https://www.shelfapp.io/" target="_blank" className="block">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
-                    <Image src={shelf} alt="Image of Shelf Inventory, an app for restaurant inventory management." className="rounded-lg mb-4"/>
-
-                    <div>
-                      <h3 className="font-medium">Shelf Inventory</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Flutter, Firebase, Dart</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="https://github.com/grcodeman/w1-website-fork" target="_blank" className="block">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
-                    <Image src={w1} alt="Image of W1 Website landing page." className="rounded-lg mb-4"/>
-
-                    <div>
-                      <h3 className="font-medium">W1 Website</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Next.js, TypeScript, Tailwind CSS</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {projects
+                .filter((p) => p.featured)
+                .map((project) => (
+                  <ProjectCard key={project.slug} project={project} />
+                ))}
             </div>
 
-            
+            <div className="text-center">
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 text-sm font-medium text-indigo-500 hover:text-indigo-400 transition-colors"
+              >
+                View All Projects
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
 
           </motion.section>
 
