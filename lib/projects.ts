@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "Sustainability challenge app built at the Bronco Sustainability Challenge.",
     tech: ["React", "Supabase"],
     categories: ["Web Dev", "Hackathon"],
-    images: ["/projects/ecoclean.png"],
+    images: ["/projects/ecoclean1.png"],
     links: [{ label: "Live Site", url: "https://clean-cloud-karma.lovable.app/" }],
     featured: false,
   },
