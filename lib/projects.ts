@@ -139,6 +139,7 @@ export const projects: Project[] = [
     images: ["/projects/ecoclean1.png"],
     links: [{ label: "Live Site", url: "https://clean-cloud-karma.lovable.app/" }],
     featured: false,
+    award: "Top 3 - Bronco 2026",
   },
   {
     slug: "cae-bucks",
