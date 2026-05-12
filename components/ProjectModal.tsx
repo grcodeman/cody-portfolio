@@ -41,9 +41,11 @@ export default function ProjectModal({
               />
               <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white dark:from-zinc-900 to-transparent" />
               {project.award && (
-                <div className="absolute top-3 left-3 bg-yellow-500/90 text-black text-xs font-semibold px-2 py-1 rounded-full">
-                  {"🏆 " + project.award}
-                </div>
+                <p className="absolute top-3 left-3 bg-yellow-500/90 text-black text-xs font-semibold px-2 py-1 rounded-full">
+                  <span aria-hidden="true">🏆 </span>
+                  <span className="sr-only">Award: </span>
+                  {project.award}
+                </p>
               )}
               {hasMultiple && (
                 <>

@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectModal from "@/components/ProjectModal";
+import ProjectsJsonLd from "@/components/ProjectsJsonLd";
 import { projects, Project } from "@/lib/projects";
 
 const LANDING_PROJECTS = projects.slice(0, 6);
@@ -16,6 +17,7 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+      <ProjectsJsonLd projects={LANDING_PROJECTS} />
       <div className="mx-auto max-w-xl px-4 py-20">
 
         {/* Header Section */}

@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import ProjectFilter from "@/components/ProjectFilter";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectModal from "@/components/ProjectModal";
+import ProjectsJsonLd from "@/components/ProjectsJsonLd";
 import { projects, type Category, type Project } from "@/lib/projects";
 
 export default function ProjectsPage() {
@@ -20,6 +21,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+      <ProjectsJsonLd projects={projects} />
       <div className="mx-auto max-w-xl px-4 py-20">
         <Header />
 
