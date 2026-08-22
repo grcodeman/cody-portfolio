@@ -30,6 +30,18 @@ export type Category = (typeof CATEGORIES)[number];
 export const projects: Project[] = [
   // --- Featured Projects ---
   {
+    slug: "volleynet",
+    title: "VolleyNet",
+    description:
+      "Volleyball community app with over-the-air releases, SMS notifications, and product analytics wired end to end.",
+    tech: ["Flutter", "Supabase", "Twilio", "Shorebird OTA", "PostHog", "Metabase"],
+    categories: ["Mobile"],
+    images: ["/projects/placeholder.svg"],
+    links: [],
+    featured: true,
+    award: "Brian Thomas Award",
+  },
+  {
     slug: "nasa-bioexplorer",
     title: "NASA BioExplorer",
     description:
@@ -75,6 +87,60 @@ export const projects: Project[] = [
   },
 
   // --- Non-Featured Projects ---
+  {
+    slug: "ignite-atp",
+    title: "Ignite Camp AI Platform",
+    description:
+      "AI platform for camp staff with General, Research, and Prototype modes — access-code auth, per-user energy budgets, and one-shot clickable prototypes.",
+    tech: ["Next.js", "TypeScript", "LLM APIs"],
+    categories: ["AI/ML", "Web Dev"],
+    images: ["/projects/placeholder.svg"],
+    links: [{ label: "Live Site", url: "https://igniteatp.com" }],
+    featured: false,
+  },
+  {
+    slug: "vantage",
+    title: "Vantage",
+    description:
+      "AI expert-matching chat with Stripe credit tiers, OTP auth, Cal.com and Calendly booking webhooks, and Resend transactional email.",
+    tech: ["Next.js", "Stripe", "Resend", "Cal.com"],
+    categories: ["AI/ML", "Web Dev"],
+    images: ["/projects/placeholder.svg"],
+    links: [],
+    featured: false,
+  },
+  {
+    slug: "bronconav",
+    title: "BroncoNav",
+    description:
+      "Campus ride platform for WMU Disability Services, built to WCAG standards with a VPAT and screen reader testing in JAWS and VoiceOver.",
+    tech: ["Next.js", "TypeScript", "Accessibility"],
+    categories: ["Web Dev"],
+    images: ["/projects/placeholder.svg"],
+    links: [],
+    featured: false,
+  },
+  {
+    slug: "swivelserve",
+    title: "SwivelServe",
+    description:
+      "B2B corporate gifting portal integrating the Shopify Admin API for orders and ShipStation for fulfillment.",
+    tech: ["Next.js", "Supabase", "Shopify Admin API", "ShipStation"],
+    categories: ["Web Dev"],
+    images: ["/projects/placeholder.svg"],
+    links: [],
+    featured: false,
+  },
+  {
+    slug: "qbronco",
+    title: "qbronco.com",
+    description: "Website build using Astro and Tailwind CSS.",
+    tech: ["Astro", "Tailwind CSS"],
+    categories: ["Web Dev"],
+    images: ["/projects/placeholder.svg"],
+    links: [{ label: "Live Site", url: "https://qbronco.com" }],
+    featured: false,
+  },
   {
     slug: "ogiek-messenger",
     title: "Ogiek Messenger",
