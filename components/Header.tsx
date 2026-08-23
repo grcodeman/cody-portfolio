@@ -35,8 +35,8 @@ export default function Header() {
       {/* Mobile Nav */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="md:hidden">
-            <FaBars className="w-6 h-6" />
+          <Button variant="ghost" className="md:hidden" aria-label="Open navigation menu">
+            <FaBars className="w-6 h-6" aria-hidden="true" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent sideOffset={4} className="md:hidden">

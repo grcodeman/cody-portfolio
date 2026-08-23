@@ -4,6 +4,22 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Project } from "@/lib/projects";
 
+const MAX_TECH = 3;
+const TECH_CHAR_BUDGET = 26;
+
+// Pick whole tech labels that fit one line; the rest collapse into "+N".
+// Budgeting by length beats flex-shrink, which ellipsises every pill at once.
+function visibleTech(tech: string[]) {
+  const shown: string[] = [];
+  let budget = TECH_CHAR_BUDGET;
+  for (const t of tech.slice(0, MAX_TECH)) {
+    if (t.length > budget && shown.length > 0) break;
+    shown.push(t);
+    budget -= t.length + 2;
+  }
+  return shown;
+}
+
 export default function ProjectCard({
   project,
   onClick,
@@ -13,39 +29,57 @@ export default function ProjectCard({
 }) {
   const headingId = `project-${project.slug}-title`;
   const awardId = `project-${project.slug}-award`;
+  const shownTech = visibleTech(project.tech);
+  const extraTech = project.tech.length - shownTech.length;
 
   return (
     <article
-      className="block"
+      className="block h-full"
       onClick={onClick}
       aria-labelledby={project.award ? `${headingId} ${awardId}` : headingId}
     >
-      <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer relative overflow-hidden">
-        {project.award && (
-          <p
-            id={awardId}
-            className="absolute top-1.5 right-1.5 z-10 bg-yellow-500/90 text-black text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
-          >
-            <span aria-hidden="true">🏆 </span>
-            <span className="sr-only">Award: </span>
-            {project.award}
-          </p>
-        )}
-        <CardContent className="p-4">
+      <Card className="group h-full gap-0 overflow-hidden py-0 bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 cursor-pointer transition-colors duration-300 hover:border-indigo-500/60 dark:hover:border-indigo-400/60">
+        {/* screenshots vary wildly in aspect; crop from the top so page headers survive */}
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100 dark:bg-zinc-950">
           <Image
             src={project.images[0]}
             alt={project.title}
-            width={600}
-            height={400}
-            className="mb-4 w-full h-auto rounded-lg"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 290px"
+            fill
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 300px"
           />
-          <div>
-            <h3 id={headingId} className="font-medium">{project.title}</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              {project.tech.join(", ")}
+          {project.award && (
+            <p
+              id={awardId}
+              className="absolute top-2 right-2 rounded-full bg-yellow-400/95 px-2 py-0.5 text-[10px] font-semibold text-black shadow-sm"
+            >
+              <span aria-hidden="true">🏆 </span>
+              <span className="sr-only">Award: </span>
+              {project.award}
             </p>
-          </div>
+          )}
+        </div>
+
+        <CardContent className="flex flex-col gap-2 p-4">
+          <h2 id={headingId} className="font-medium leading-snug">
+            {project.title}
+          </h2>
+          {/* budgeted above so this never wraps to a second row */}
+          <ul className="flex gap-1.5 overflow-hidden">
+            {shownTech.map((tech) => (
+              <li
+                key={tech}
+                className="shrink-0 rounded-full bg-gray-200/70 px-2 py-0.5 text-[11px] whitespace-nowrap text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
+              >
+                {tech}
+              </li>
+            ))}
+            {extraTech > 0 && (
+              <li className="shrink-0 px-1 py-0.5 text-[11px] whitespace-nowrap text-gray-500 dark:text-gray-400">
+                +{extraTech}
+              </li>
+            )}
+          </ul>
         </CardContent>
       </Card>
     </article>
