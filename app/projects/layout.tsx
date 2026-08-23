@@ -4,7 +4,9 @@ const description =
   "Projects by Cody Thornell — web, mobile, AI/ML, AR/VR, and IT tooling, including VolleyNet, BroncoNav, Cultivate269, Shelf Inventory, and hackathon winners.";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  // a plain string here would clear the root template for every child route,
+  // leaving project pages titled just "VolleyNet"
+  title: { default: "Projects", template: "%s | Cody Thornell" },
   description,
   alternates: { canonical: "/projects" },
   openGraph: {

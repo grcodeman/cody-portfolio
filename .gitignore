@@ -41,4 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 # out-of-band verification builds
-.next-verify
+.next-verify*
+.next-check
