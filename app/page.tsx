@@ -100,9 +100,9 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                <Link href="https://wmich.edu/" target="_blank" aria-label="Western Michigan University" className="grid h-12 w-12 shrink-0 place-items-center transition-opacity hover:opacity-70">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
-                </span>
+                </Link>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Aug 2025 - Present</p>
                   <p className="font-medium">IT Graduate Manager</p>
@@ -119,9 +119,9 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                <Link href="https://wmich.edu/" target="_blank" aria-label="Western Michigan University" className="grid h-12 w-12 shrink-0 place-items-center transition-opacity hover:opacity-70">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
-                </span>
+                </Link>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">May 2023 - Aug 2025</p>
                   <p className="font-medium">IT System Administrator</p>
@@ -138,9 +138,9 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                <Link href="https://wmich.edu/" target="_blank" aria-label="Western Michigan University" className="grid h-12 w-12 shrink-0 place-items-center transition-opacity hover:opacity-70">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
-                </span>
+                </Link>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Oct 2024 - Jul 2025</p>
                   <p className="font-medium">Undergraduate Research Assistant</p>
@@ -156,10 +156,10 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                <Link href="https://www.gentex.com/" target="_blank" aria-label="Gentex Corporation" className="grid h-12 w-12 shrink-0 place-items-center transition-opacity hover:opacity-70">
                   <Image src="/companies/gentex-black.png" alt="" aria-hidden="true" width={805} height={169} className="h-full w-full object-contain dark:hidden" />
                   <Image src="/companies/gentex-white.png" alt="" aria-hidden="true" width={805} height={169} className="h-full w-full object-contain hidden dark:block" />
-                </span>
+                </Link>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">May 2024 - Feb 2025</p>
                   <p className="font-medium">IT Systems Engineering Intern/Co-op</p>
@@ -188,9 +188,9 @@ export default function Home() {
 
             <div className="space-y-2">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                <Link href="https://wmich.edu/" target="_blank" aria-label="Western Michigan University" className="grid h-12 w-12 shrink-0 place-items-center transition-opacity hover:opacity-70">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
-                </span>
+                </Link>
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2025 - Exp May 2027</p>
                   <p className="font-medium">MBA Admitted</p>
@@ -201,9 +201,9 @@ export default function Home() {
 
             <div className="space-y-2">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                <Link href="https://wmich.edu/" target="_blank" aria-label="Western Michigan University" className="grid h-12 w-12 shrink-0 place-items-center transition-opacity hover:opacity-70">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
-                </span>
+                </Link>
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Aug 2022 - Apr 2025</p>
                   <p className="font-medium">B.S. Computer Science</p>
@@ -214,10 +214,10 @@ export default function Home() {
 
             <div className="space-y-2">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                <Link href="https://www.grcc.edu/" target="_blank" aria-label="Grand Rapids Community College" className="grid h-12 w-12 shrink-0 place-items-center transition-opacity hover:opacity-70">
                   <Image src="/companies/grcc-navy.png" alt="" aria-hidden="true" width={5417} height={1917} className="h-full w-full object-contain dark:hidden" />
                   <Image src="/companies/grcc-white.png" alt="" aria-hidden="true" width={5417} height={1917} className="h-full w-full object-contain hidden dark:block" />
-                </span>
+                </Link>
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2020 - May 2023</p>
                   <p className="font-medium">A.S. Computer Science</p>
