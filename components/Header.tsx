@@ -12,9 +12,13 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between mb-12">
       {/* PFP */}
-      <div className="w-20 h-20 rounded-full overflow-hidden">
-        <Image src={pfp} alt="profile picture" className="cursor-pointer transition-all duration-300 hover:scale-110"></Image>
-      </div>
+      <Link
+        href="/"
+        aria-label="Cody Thornell — home"
+        className="block w-20 h-20 rounded-full overflow-hidden"
+      >
+        <Image src={pfp} alt="" aria-hidden="true" className="transition-all duration-300 hover:scale-110" />
+      </Link>
 
       {/* Desktop Nav */}
       <nav className="hidden md:flex space-x-4">
