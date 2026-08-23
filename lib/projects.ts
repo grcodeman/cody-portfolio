@@ -37,7 +37,7 @@ export const projects: Project[] = [
     tech: ["Flutter", "Supabase", "Twilio", "Shorebird OTA", "PostHog", "Metabase"],
     categories: ["Mobile"],
     images: ["/projects/volleynet.png", "/projects/volleynet2.png"],
-    links: [],
+    links: [{ label: "Live Site", url: "https://www.volleynetapp.com/" }, { label: "App Store", url: "https://apps.apple.com/us/app/volleynet-sports-social-app/id6779828510" }, { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.volleynetapp.volleynet" }],
     featured: true,
     award: "Brian Thomas Award",
   },
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS", "Supabase"],
     categories: ["Web Dev"],
     images: ["/projects/cultivate1.png", "/projects/cultivate2.png", "/projects/cultivate3.png", "/projects/cultivate4.png"],
-    links: [{ label: "Live Site", url: "https://cultivate269.com/" }],
+    links: [{ label: "Live Site", url: "https://cultivate269.com/" }, { label: "Article", url: "https://wmich.edu/news/news/2026/04/cultivate-269-2026-pitch-competition-winner-sam-marseille" }],
     featured: true,
   },
   {
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "Accessibility"],
     categories: ["Web Dev"],
     images: ["/projects/bronconav.png", "/projects/bronconav2.png", "/projects/bronconav3.png"],
-    links: [],
+    links: [{ label: "Live Site", url: "https://www.bronconav.com/" }, { label: "Article", url: "https://www.westernherald.com/news/article_e1c3bf06-8b82-4ac7-ac92-fd11bb3c68c5.html" }],
     featured: true,
   },
   {
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     tech: ["Unity", "Flutter", "Firebase", "Hololens"],
     categories: ["Mobile", "AR/VR"],
     images: ["/projects/atom.png", "/projects/atom2.png", "/projects/atom3.png"],
-    links: [{ label: "Presentation", url: "https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view" }],
+    links: [{ label: "Presentation", url: "https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view" }, { label: "Article", url: "https://wmich.edu/news/2023/05/71778" }],
     featured: true,
   },
 
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "Stripe", "Resend", "Cal.com"],
     categories: ["AI/ML", "Web Dev"],
     images: ["/projects/vantage.png", "/projects/vantage2.png"],
-    links: [],
+    links: [{ label: "Live Site", url: "https://liminalgroupvantage.com/" }],
     featured: false,
   },
   {
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "Supabase", "Shopify Admin API", "ShipStation"],
     categories: ["Web Dev"],
     images: ["/projects/swivelserve.png", "/projects/swivelserve2.png", "/projects/swivelserve3.png"],
-    links: [],
+    links: [{ label: "Live Site", url: "https://portal.swivelserve.com/" }],
     featured: false,
   },
   {
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     tech: ["Astro", "Tailwind CSS"],
     categories: ["Web Dev"],
     images: ["/projects/qbronco.png"],
-    links: [{ label: "Live Site", url: "https://qbronco.com" }],
+    links: [{ label: "Live Site", url: "https://www.qbronco.com/" }],
     featured: false,
   },
   {
