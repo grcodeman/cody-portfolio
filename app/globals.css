@@ -192,3 +192,8 @@ body {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* matching hand cursor for anything clickable */
+a, button, summary, label, select, [role="button"], .cursor-pointer {
+  cursor: url("/cursor-pointer.svg") 11 2, pointer;
+}
