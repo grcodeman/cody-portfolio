@@ -39,7 +39,7 @@ export const projects: Project[] = [
     images: ["/projects/volleynet.png", "/projects/volleynet2.png"],
     links: [{ label: "Live Site", url: "https://www.volleynetapp.com/" }, { label: "App Store", url: "https://apps.apple.com/us/app/volleynet-sports-social-app/id6779828510" }, { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.volleynetapp.volleynet" }],
     featured: true,
-    award: "Brian Thomas Award",
+    award: "3 Grants",
   },
   {
     slug: "cultivate269",

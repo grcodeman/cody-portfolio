@@ -5,7 +5,7 @@
 ## Pages
 
 - [Home](https://codythornell.com/): Bio, experience history, education, and featured projects.
-- [Projects](https://codythornell.com/projects): Full filterable project list (categories: AI/ML, Web Dev, Hackathon, Mobile, IT Tools, AR/VR).
+- [Projects](https://codythornell.com/projects): Full filterable project list (categories: AI/ML, Web Dev, Hackathon, Mobile, IT Tools, AR/VR). Every project also has its own page at https://codythornell.com/projects/<slug> — linked below.
 - [Blog](https://codythornell.com/blog): Blog index. No posts published yet.
 - [Contact](https://codythornell.com/contact): Contact form — the way to reach Cody. No public email address is listed on the site.
 
@@ -31,28 +31,30 @@
 
 ## Featured projects
 
-- [VolleyNet](https://www.volleynetapp.com/): Volleyball community app with over-the-air releases, SMS notifications, and product analytics wired end to end. Tech: Flutter, Supabase, Twilio, Shorebird OTA, PostHog, Metabase. Award: Brian Thomas Award. Also on the [App Store](https://apps.apple.com/us/app/volleynet-sports-social-app/id6779828510) and [Google Play](https://play.google.com/store/apps/details?id=com.volleynetapp.volleynet).
-- [Cultivate269® Website](https://cultivate269.com/): Client website build for a local organization. Tech: React, Tailwind CSS, Supabase. [Article](https://wmich.edu/news/news/2026/04/cultivate-269-2026-pitch-competition-winner-sam-marseille).
-- [BroncoNav](https://www.bronconav.com/): Campus ride platform for WMU Disability Services, built to WCAG standards with a VPAT and screen reader testing in JAWS and VoiceOver. Tech: Next.js, TypeScript, Accessibility. [Article](https://www.westernherald.com/news/article_e1c3bf06-8b82-4ac7-ac92-fd11bb3c68c5.html).
-- [Ignite Camp AI Platform](https://igniteatp.com): AI platform for camp staff with General, Research, and Prototype modes — access-code auth, per-user energy budgets, and one-shot clickable prototypes. Tech: Next.js, TypeScript, LLM APIs.
-- [Shelf Inventory](https://www.shelfapp.io/): Mobile app for restaurant inventory management. Tech: Flutter, Firebase, Dart. Award: 2 Pitch Awards. [Article](https://michigansbdc.org/startups/shelf-llc/).
-- [ATOM Medic](https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view): Heart-anatomy lab prototype using augmented/mixed reality. Tech: Unity, Flutter, Firebase, HoloLens. [Article](https://wmich.edu/news/2023/05/71778).
+Each title links to its page on this site; external links follow.
+
+- [VolleyNet](https://codythornell.com/projects/volleynet): Volleyball community app with over-the-air releases, SMS notifications, and product analytics wired end to end. Tech: Flutter, Supabase, Twilio, Shorebird OTA, PostHog, Metabase. Award: 3 Grants. Links: [Live Site](https://www.volleynetapp.com/), [App Store](https://apps.apple.com/us/app/volleynet-sports-social-app/id6779828510), [Google Play](https://play.google.com/store/apps/details?id=com.volleynetapp.volleynet).
+- [Cultivate269® Website](https://codythornell.com/projects/cultivate269): Client website build for a local organization. Tech: React, Tailwind CSS, Supabase. Links: [Live Site](https://cultivate269.com/), [Article](https://wmich.edu/news/news/2026/04/cultivate-269-2026-pitch-competition-winner-sam-marseille).
+- [BroncoNav](https://codythornell.com/projects/bronconav): Campus ride platform for WMU Disability Services, built to WCAG standards with a VPAT and screen reader testing in JAWS and VoiceOver. Tech: Next.js, TypeScript, Accessibility. Links: [Live Site](https://www.bronconav.com/), [Article](https://www.westernherald.com/news/article_e1c3bf06-8b82-4ac7-ac92-fd11bb3c68c5.html).
+- [Ignite Camp AI Platform](https://codythornell.com/projects/ignite-atp): AI platform for camp staff with General, Research, and Prototype modes — access-code auth, per-user energy budgets, and one-shot clickable prototypes. Tech: Next.js, TypeScript, LLM APIs. Links: [Live Site](https://igniteatp.com).
+- [Shelf Inventory](https://codythornell.com/projects/shelf-inventory): Mobile app for restaurant inventory management. Tech: Flutter, Firebase, Dart. Award: 2 Pitch Awards. Links: [Live Site](https://www.shelfapp.io/), [Article](https://michigansbdc.org/startups/shelf-llc/).
+- [ATOM Medic](https://codythornell.com/projects/atom-medic): Heart-anatomy lab prototype using augmented/mixed reality. Tech: Unity, Flutter, Firebase, HoloLens. Links: [Presentation](https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view), [Article](https://wmich.edu/news/2023/05/71778).
 
 ## Other projects
 
-- [Vantage](https://liminalgroupvantage.com/): AI expert-matching chat with Stripe credit tiers, OTP auth, Cal.com and Calendly booking webhooks, and Resend transactional email. Tech: Next.js, Stripe, Resend, Cal.com.
-- [SwivelServe](https://portal.swivelserve.com/): B2B corporate gifting portal integrating the Shopify Admin API for orders and ShipStation for fulfillment. Tech: Next.js, Supabase, Shopify Admin API, ShipStation.
-- [NASA BioExplorer](https://github.com/grcodeman/nasa-space-bio): RAG chat assistant for space biology research papers, built for the NASA Space Apps challenge. Tech: React, Python, RAG, Supabase. Award: Top 3 - Bronco 2026.
-- [HackWMU 2024](https://codythornell.com/projects): Water research tracking app. Tech: Flutter, Dart. Award: 1st Place - HackWMU 2024.
-- [MWC3 2024 Python](https://github.com/grcodeman/mwc3-python): Competitive programming challenge. Tech: Python, Pandas. Award: 1st Place - MWC3 2024.
-- [Minecraft Darts](https://github.com/grcodeman/sprintdev-partygames): Minecraft mod adding a darts mini-game. Tech: Java, Minecraft. Award: 1st Place - sprint.dev 2025.
-- [FlightBrief AI](https://github.com/grcodeman/localhost-flightbriefai): AI-powered tool to generate flight log reports from plane numbers. Tech: React, OpenSky API, Nebius LLM. Award: Top 5 - Localhost 2025.
-- [EcoClean](https://clean-cloud-karma.lovable.app/): Sustainability challenge app built at the Bronco Sustainability Challenge. Tech: React, Supabase.
-- [Ogiek Messenger](https://github.com/grcodeman/sautiyaogiek): SMS system for the Ogiek community with preset menus and an LLM-powered RAG engine for custom queries. Tech: Python, Ollama, Langchain, SMS.
-- [qbronco.com](https://www.qbronco.com/): Website build. Tech: Astro, Tailwind CSS.
-- [DSC Website](https://github.com/grcodeman/dsc-website-fork): Website for Western Michigan University's Data Science Club. Tech: Next.js, TypeScript, Tailwind CSS.
-- [W1 Website](https://github.com/grcodeman/w1-website-fork): Website build for a student organization. Tech: Next.js, TypeScript, Tailwind CSS.
-- [CAE Bucks Dashboard](https://codythornell.com/projects): Internal leaderboard for IT team ticket rewards at the CAE Center. Tech: React, Python, Redmine API.
-- [Inventory LLM Chatbot](https://github.com/grcodeman/inventory-llm): LLM-powered chatbot assistant for managing inventory queries. Tech: React, Nebius LLM.
-- [NFL Over/Under ML Model](https://github.com/grcodeman/cs5821-nfl): Machine learning model for predicting NFL over/under outcomes. Tech: Python, ML.
-- [StillTasty Scraper](https://github.com/grcodeman/stilltasty-scraping): Web scraper for collecting food expiration data from StillTasty. Tech: Python.
+- [Vantage](https://codythornell.com/projects/vantage): AI expert-matching chat with Stripe credit tiers, OTP auth, Cal.com and Calendly booking webhooks, and Resend transactional email. Tech: Next.js, Stripe, Resend, Cal.com. Links: [Live Site](https://liminalgroupvantage.com/).
+- [SwivelServe](https://codythornell.com/projects/swivelserve): B2B corporate gifting portal integrating the Shopify Admin API for orders and ShipStation for fulfillment. Tech: Next.js, Supabase, Shopify Admin API, ShipStation. Links: [Live Site](https://portal.swivelserve.com/).
+- [NASA BioExplorer](https://codythornell.com/projects/nasa-bioexplorer): RAG chat assistant for space biology research papers, built for the NASA Space Apps challenge. Tech: React, Python, RAG, Supabase. Award: Top 3 - Bronco 2026. Links: [GitHub](https://github.com/grcodeman/nasa-space-bio).
+- [HackWMU 2024](https://codythornell.com/projects/hackwmu-2024): Water research tracking app. Tech: Flutter, Dart. Award: 1st Place - HackWMU 2024.
+- [MWC3 2024 Python](https://codythornell.com/projects/mwc3-python): Competitive programming challenge. Tech: Python, Pandas. Award: 1st Place - MWC3 2024. Links: [GitHub](https://github.com/grcodeman/mwc3-python).
+- [Minecraft Darts](https://codythornell.com/projects/minecraft-darts): Minecraft mod adding a darts mini-game. Tech: Java, Minecraft. Award: 1st Place - sprint.dev 2025. Links: [GitHub](https://github.com/grcodeman/sprintdev-partygames).
+- [FlightBrief AI](https://codythornell.com/projects/flightbrief-ai): AI-powered tool to generate flight log reports from plane numbers. Tech: React, OpenSky API, Nebius LLM. Award: Top 5 - Localhost 2025. Links: [GitHub](https://github.com/grcodeman/localhost-flightbriefai).
+- [EcoClean](https://codythornell.com/projects/ecoclean): Sustainability challenge app built at the Bronco Sustainability Challenge. Tech: React, Supabase. Links: [Live Site](https://clean-cloud-karma.lovable.app/).
+- [Ogiek Messenger](https://codythornell.com/projects/ogiek-messenger): SMS system for the Ogiek community with preset menus and an LLM-powered RAG engine for custom queries. Tech: Python, Ollama, Langchain, SMS. Links: [GitHub](https://github.com/grcodeman/sautiyaogiek).
+- [qbronco.com](https://codythornell.com/projects/qbronco): Website build. Tech: Astro, Tailwind CSS. Links: [Live Site](https://www.qbronco.com/).
+- [DSC Website](https://codythornell.com/projects/dsc-website): Website for Western Michigan University's Data Science Club. Tech: Next.js, TypeScript, Tailwind CSS. Links: [GitHub](https://github.com/grcodeman/dsc-website-fork).
+- [W1 Website](https://codythornell.com/projects/w1-website): Website build for a student organization. Tech: Next.js, TypeScript, Tailwind CSS. Links: [GitHub](https://github.com/grcodeman/w1-website-fork).
+- [CAE Bucks Dashboard](https://codythornell.com/projects/cae-bucks): Internal leaderboard for IT team ticket rewards at the CAE Center. Tech: React, Python, Redmine API.
+- [Inventory LLM Chatbot](https://codythornell.com/projects/inventory-llm): LLM-powered chatbot assistant for managing inventory queries. Tech: React, Nebius LLM. Links: [GitHub](https://github.com/grcodeman/inventory-llm).
+- [NFL Over/Under ML Model](https://codythornell.com/projects/nfl-over-under): Machine learning model for predicting NFL over/under outcomes. Tech: Python, ML. Links: [GitHub](https://github.com/grcodeman/cs5821-nfl).
+- [StillTasty Scraper](https://codythornell.com/projects/stilltasty-scraper): Web scraper for collecting food expiration data from StillTasty. Tech: Python. Links: [GitHub](https://github.com/grcodeman/stilltasty-scraping).
