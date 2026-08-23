@@ -17,18 +17,14 @@ Built to learn web dev in the open, and kept as my main showcase.
 
 ---
 
-## What's in here
+## Pages
 
 | | |
 |---|---|
-| **Projects** | 22 projects with screenshots, tech, awards, and links — each with its own page |
-| **Detail pages** | `/projects/[slug]`, statically generated, with a per-project Open Graph image |
-| **Quick view** | Click any card for a modal with the gallery and links, without leaving the grid |
-| **Filtering** | Category pills with a gradient indicator that slides between selections |
-| **Dark mode** | System-aware, toggleable, no flash on load |
-| **Machine readable** | `llms.txt`, JSON-LD (`Person`, `WebSite`, `CreativeWork`), sitemap, AI crawlers allowed |
-| **Accessible** | Lighthouse accessibility 100 — named controls, checked contrast, visible focus |
-| **Custom cursors** | Gradient arrow and pointer matching the site's palette |
+| **Home** | Who I am, my IT and software experience, and education |
+| **Projects** | Everything I've built — web, mobile, AI/ML, AR/VR, hackathons, and IT tooling |
+| **Blog** | Writing on what I'm working on and learning (coming soon) |
+| **Contact** | Get in touch |
 
 ## Stack
 
