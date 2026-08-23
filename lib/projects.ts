@@ -67,7 +67,7 @@ export const projects: Project[] = [
     title: "Ignite Camp AI Platform",
     description:
       "AI platform for camp staff with General, Research, and Prototype modes — access-code auth, per-user energy budgets, and one-shot clickable prototypes.",
-    tech: ["Next.js", "TypeScript", "LLM APIs"],
+    tech: ["Next.js", "Nebius", "Supabase", "Firecrawl"],
     categories: ["AI/ML", "Web Dev"],
     images: ["/projects/ignite.png", "/projects/ignite2.png", "/projects/ignite3.png"],
     links: [{ label: "Live Site", url: "https://igniteatp.com" }],
