@@ -367,3 +367,4 @@
 [2026-08-23T03:37:03.481Z] GET http://localhost:3232/_next/image?url=%2Fprojects%2Fvolleynet.png&w=640&q=75 → 200 (76ms, 26654B)
 [2026-08-23T03:37:03.552Z] POST https://f.clarity.ms/collect → 204 (33ms, ?B)
 [2026-08-23T03:37:05.570Z] POST https://f.clarity.ms/collect → 204 (32ms, ?B)
+[2026-08-23T04:23:32.425Z] POST https://z.clarity.ms/collect → 204 (114ms, ?B)

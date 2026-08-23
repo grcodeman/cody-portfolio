@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Dialog,
@@ -10,6 +10,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
+import ProjectShareActions from "@/components/ProjectShareActions";
 import type { Project } from "@/lib/projects";
 
 // direction: 1 = moving forward (new image enters from the right), -1 = backward
@@ -26,12 +27,14 @@ export default function ProjectModal({
   project: Project | null;
   onClose: () => void;
 }) {
-  // [index, direction] — direction drives which side the next image slides in from
+  // [index, direction] - direction drives which side the next image slides in from
   const [[currentIndex, direction], setSlide] = useState<[number, number]>([0, 0]);
 
   // The shared-element image starts at the card's rect, outside the panel box.
   // overflow-y-auto would clip that, so scrolling is only enabled once it lands.
   const [settled, setSettled] = useState(false);
+
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     setSlide([0, 0]);
@@ -55,7 +58,7 @@ export default function ProjectModal({
           <>
             {/* layoutId matches the card thumbnail, so the modal grows out of the card */}
             <motion.div
-              layoutId={`project-thumb-${project.slug}`}
+              layoutId={reduceMotion ? undefined : `project-thumb-${project.slug}`}
               className="relative aspect-[940/788] w-full overflow-hidden"
               transition={{ type: "spring", stiffness: 300, damping: 34 }}
             >
@@ -145,8 +148,7 @@ export default function ProjectModal({
                 {project.description}
               </p>
 
-              {project.links.length > 0 && (
-                <div className="flex flex-wrap gap-2 pt-2">
+              <div className="flex flex-wrap items-center gap-2 pt-2">
                   {project.links.map((link) => (
                     <a
                       key={link.url}
@@ -158,9 +160,9 @@ export default function ProjectModal({
                       <ExternalLink className="size-3.5" />
                       {link.label}
                     </a>
-                  ))}
-                </div>
-              )}
+                ))}
+                <ProjectShareActions project={project} className="ml-auto" />
+              </div>
             </div>
           </>
         )}

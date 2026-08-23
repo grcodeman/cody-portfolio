@@ -1,15 +1,16 @@
 "use client";
 
-import { useRef } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
+import ProjectShareActions from "@/components/ProjectShareActions";
 import type { Project } from "@/lib/projects";
 
 const MAX_TILT = 7; // degrees at the card's edge
 
 const MAX_TECH = 3;
-const TECH_CHAR_BUDGET = 26;
+const TECH_CHAR_BUDGET = 18; // leaves room for the icon actions on the same row
 
 // Pick whole tech labels that fit one line; the rest collapse into "+N".
 // Budgeting by length beats flex-shrink, which ellipsises every pill at once.
@@ -36,6 +37,10 @@ export default function ProjectCard({
   const shownTech = visibleTech(project.tech);
   const extraTech = project.tech.length - shownTech.length;
   const tiltRef = useRef<HTMLElement>(null);
+  const reduceMotion = useReducedMotion();
+  // On close the modal's copy unmounts, so framer flies *this* node back down.
+  // It has to escape the card's clip box and the neighbouring cards while it does.
+  const [flying, setFlying] = useState(false);
 
   // Written straight to the node: a state update per mousemove would re-render
   // every card in the grid.
@@ -55,20 +60,25 @@ export default function ProjectCard({
   return (
     <article
       ref={tiltRef}
-      className="block h-full [transform-style:preserve-3d] transition-transform duration-300 ease-out will-change-transform"
+      className={`block h-full [transform-style:preserve-3d] transition-transform duration-300 ease-out will-change-transform ${flying ? "z-30" : ""}`}
       onClick={() => {
         resetTilt();
         onClick?.();
       }}
-      onMouseMove={handleTilt}
+      // a tilt transform under the flying thumb would skew what framer measures
+      onMouseMove={flying ? undefined : handleTilt}
       onMouseLeave={resetTilt}
       aria-labelledby={project.award ? `${headingId} ${awardId}` : headingId}
     >
-      <Card className="group h-full gap-0 overflow-hidden py-0 bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 cursor-pointer transition-colors duration-300 hover:border-indigo-500/60 dark:hover:border-indigo-400/60">
+      {/* no overflow-hidden here: it would clip the thumbnail's flight back from the modal.
+          The thumbnail rounds its own top corners instead. */}
+      <Card className="group h-full gap-0 py-0 bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 cursor-pointer transition-colors duration-300 hover:border-indigo-500/60 dark:hover:border-indigo-400/60">
         {/* every screenshot is exported at 940x788, so matching that ratio crops nothing */}
         <motion.div
-          layoutId={`project-thumb-${project.slug}`}
-          className="relative aspect-[940/788] w-full overflow-hidden bg-gray-100 dark:bg-zinc-950"
+          layoutId={reduceMotion ? undefined : `project-thumb-${project.slug}`}
+          onLayoutAnimationStart={() => setFlying(true)}
+          onLayoutAnimationComplete={() => setFlying(false)}
+          className="relative aspect-[940/788] w-full overflow-hidden rounded-t-xl bg-gray-100 dark:bg-zinc-950"
         >
           <Image
             src={project.images[0]}
@@ -108,19 +118,12 @@ export default function ProjectCard({
                 +{extraTech}
               </li>
             )}
+            <li className="ml-auto shrink-0">
+              <ProjectShareActions project={project} compact />
+            </li>
           </ul>
         </CardContent>
 
-        <div className="sr-only" aria-hidden="true">
-          <p>{project.description}</p>
-          <p>Tech: {project.tech.join(", ")}</p>
-          {project.award && <p>Award: {project.award}</p>}
-          {project.links.map((link) => (
-            <a key={link.url} href={link.url} tabIndex={-1}>
-              {project.title} — {link.label}
-            </a>
-          ))}
-        </div>
       </Card>
     </article>
   );
