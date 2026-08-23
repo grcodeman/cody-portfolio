@@ -100,7 +100,7 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                <span className="grid h-12 w-12 shrink-0 place-items-center">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
                 </span>
                 <div className="space-y-1">
@@ -119,7 +119,7 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                <span className="grid h-12 w-12 shrink-0 place-items-center">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
                 </span>
                 <div className="space-y-1">
@@ -138,7 +138,7 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                <span className="grid h-12 w-12 shrink-0 place-items-center">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
                 </span>
                 <div className="space-y-1">
@@ -156,8 +156,9 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
-                  <Image src="/companies/gentex-black.png" alt="" aria-hidden="true" width={805} height={169} className="h-full w-full object-contain" />
+                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                  <Image src="/companies/gentex-black.png" alt="" aria-hidden="true" width={805} height={169} className="h-full w-full object-contain dark:hidden" />
+                  <Image src="/companies/gentex-white.png" alt="" aria-hidden="true" width={805} height={169} className="h-full w-full object-contain hidden dark:block" />
                 </span>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">May 2024 - Feb 2025</p>
@@ -187,7 +188,7 @@ export default function Home() {
 
             <div className="space-y-2">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                <span className="grid h-12 w-12 shrink-0 place-items-center">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
                 </span>
                 <div className="space-y-1">
@@ -200,7 +201,7 @@ export default function Home() {
 
             <div className="space-y-2">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                <span className="grid h-12 w-12 shrink-0 place-items-center">
                   <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
                 </span>
                 <div className="space-y-1">
@@ -213,8 +214,9 @@ export default function Home() {
 
             <div className="space-y-2">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
-                  <Image src="/companies/grcc.png" alt="" aria-hidden="true" width={5417} height={1917} className="h-full w-full object-contain" />
+                <span className="grid h-12 w-12 shrink-0 place-items-center">
+                  <Image src="/companies/grcc-navy.png" alt="" aria-hidden="true" width={5417} height={1917} className="h-full w-full object-contain dark:hidden" />
+                  <Image src="/companies/grcc-white.png" alt="" aria-hidden="true" width={5417} height={1917} className="h-full w-full object-contain hidden dark:block" />
                 </span>
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2020 - May 2023</p>
