@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Cody Thornell | IT and Software Developer",
     description: SITE_DESCRIPTION,
+    site: "@codythornell",
     creator: "@codythornell",
   },
   robots: {
@@ -56,6 +57,13 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
 };
 
 export default function RootLayout({
