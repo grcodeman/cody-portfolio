@@ -175,3 +175,8 @@
     @apply bg-input/70;
   }
 }
+
+/* gradient arrow cursor (matches the name gradient); Safari ignores SVG cursors and falls back */
+body {
+  cursor: url("/cursor.svg") 3 2, auto;
+}
