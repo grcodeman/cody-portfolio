@@ -180,3 +180,8 @@
 body {
   cursor: url("/cursor.svg") 3 2, auto;
 }
+
+::selection {
+  background: #6366f1; /* indigo-500, mid-stop of the name gradient */
+  color: #fff;
+}
