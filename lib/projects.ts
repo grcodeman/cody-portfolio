@@ -129,7 +129,6 @@ export const projects: Project[] = [
     images: ["/projects/nasabioexplorer1.png", "/projects/nasabioexplorer2.png", "/projects/nasabioexplorer3.png"],
     links: [{ label: "GitHub", url: "https://github.com/grcodeman/nasa-space-bio" }],
     featured: false,
-    award: "Top 3 - Bronco 2026",
   },
   {
     slug: "hackwmu-2024",
@@ -189,6 +188,7 @@ export const projects: Project[] = [
     images: ["/projects/ecoclean1.png"],
     links: [{ label: "Live Site", url: "https://clean-cloud-karma.lovable.app/" }],
     featured: false,
+    award: "Top 3 - Bronco 2026",
   },
   {
     slug: "ogiek-messenger",
