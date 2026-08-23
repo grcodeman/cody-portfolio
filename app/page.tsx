@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Header from "../components/Header";
@@ -104,6 +105,7 @@ export default function Home() {
                   <p className="font-medium">IT Graduate Manager</p>
                   <p className="text-indigo-600 dark:text-indigo-400">WMU CAE Center</p>
                 </div>
+                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
                 <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
                   <li>Working under the IT Director to <strong>manage a team of 12+ students</strong> in facilitating IT operations and internal software development, overseeing the College of Engineering and Applied Sciences.</li>
@@ -120,6 +122,7 @@ export default function Home() {
                   <p className="font-medium">IT System Administrator</p>
                   <p className="text-indigo-600 dark:text-indigo-400">WMU CAE Center</p>
                 </div>
+                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
                 <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
                   <li>Provided comprehensive IT support, troubleshooting and resolving issues related to computers, printers, projectors, and other tech equipment.</li>
@@ -136,6 +139,7 @@ export default function Home() {
                   <p className="font-medium">Undergraduate Research Assistant</p>
                   <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
+                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
               <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
                 <li>Contributed to multiple research projects on emerging technologies in collaboration with WMED School and partner institutions.</li>
@@ -151,6 +155,8 @@ export default function Home() {
                   <p className="font-medium">IT Systems Engineering Intern/Co-op</p>
                   <p className="text-indigo-600 dark:text-indigo-400">Gentex Corporation</p>
                 </div>
+                <Image src="/companies/gentex-black.png" alt="" aria-hidden="true" width={805} height={169} className="h-6 w-auto shrink-0 dark:hidden" />
+                <Image src="/companies/gentex-white.png" alt="" aria-hidden="true" width={805} height={169} className="hidden h-6 w-auto shrink-0 dark:block" />
               </div>
                 <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
                   <li><strong>Developed scripts</strong> and <strong>Power BI reports</strong> for multiple IT teams, enhancing operational efficiency and data analysis.</li>
@@ -179,6 +185,7 @@ export default function Home() {
                   <p className="font-medium">MBA Admitted</p>
                   <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
+                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
             </div>
 
@@ -189,6 +196,7 @@ export default function Home() {
                   <p className="font-medium">B.S. Computer Science</p>
                   <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
+                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
             </div>
 
