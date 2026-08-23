@@ -44,7 +44,7 @@ export default function ProjectsPage() {
               onChange={(cat) => setActiveCategory(cat)}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 items-start md:relative md:left-1/2 md:-translate-x-1/2 md:w-[min(56rem,calc(100vw-3rem))]">
               {filtered.map((project) => (
                 <ProjectCard
                   key={project.slug}

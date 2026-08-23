@@ -16,11 +16,11 @@ export default function ProjectCard({
 
   return (
     <article
-      className="block h-full"
+      className="block"
       onClick={onClick}
       aria-labelledby={project.award ? `${headingId} ${awardId}` : headingId}
     >
-      <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer h-full relative overflow-hidden">
+      <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer relative overflow-hidden">
         {project.award && (
           <p
             id={awardId}
@@ -37,8 +37,8 @@ export default function ProjectCard({
             alt={project.title}
             width={600}
             height={400}
-            className="rounded-lg mb-4 w-full h-auto"
-            sizes="(max-width: 768px) 100vw, 33vw"
+            className="mb-4 w-full h-auto rounded-lg"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 290px"
           />
           <div>
             <h3 id={headingId} className="font-medium">{project.title}</h3>

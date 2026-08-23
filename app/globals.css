@@ -175,3 +175,25 @@
     @apply bg-input/70;
   }
 }
+
+/* gradient arrow cursor (matches the name gradient); Safari ignores SVG cursors and falls back */
+body {
+  cursor: url("/cursor.svg") 3 2, auto;
+}
+
+::selection {
+  background: #6366f1; /* indigo-500, mid-stop of the name gradient */
+  color: #fff;
+}
+
+/* visible keyboard focus (browser default is inconsistent / invisible on dark) */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* matching hand cursor for anything clickable */
+a, button, summary, label, select, [role="button"], .cursor-pointer {
+  cursor: url("/cursor-pointer.svg") 10 2, pointer;
+}
