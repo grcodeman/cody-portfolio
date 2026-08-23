@@ -2,13 +2,22 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
 import type { Project } from "@/lib/projects";
+
+// direction: 1 = moving forward (new image enters from the right), -1 = backward
+const slideVariants = {
+  enter: (d: number) => ({ x: d === 0 ? "0%" : d > 0 ? "100%" : "-100%" }),
+  center: { x: "0%" },
+  exit: (d: number) => ({ x: d > 0 ? "-100%" : "100%" }),
+};
 
 export default function ProjectModal({
   project,
@@ -17,29 +26,60 @@ export default function ProjectModal({
   project: Project | null;
   onClose: () => void;
 }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // [index, direction] — direction drives which side the next image slides in from
+  const [[currentIndex, direction], setSlide] = useState<[number, number]>([0, 0]);
+
+  // The shared-element image starts at the card's rect, outside the panel box.
+  // overflow-y-auto would clip that, so scrolling is only enabled once it lands.
+  const [settled, setSettled] = useState(false);
 
   useEffect(() => {
-    setCurrentIndex(0);
+    setSlide([0, 0]);
+    if (!project) {
+      setSettled(false);
+      return;
+    }
+    const t = setTimeout(() => setSettled(true), 450);
+    return () => clearTimeout(t);
   }, [project]);
 
   const hasMultiple = project ? project.images.length > 1 : false;
+  const count = project?.images.length ?? 0;
+
+  const goTo = (next: number, dir: number) => setSlide([(next + count) % count, dir]);
 
   return (
     <Dialog open={!!project} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 sm:max-w-xl max-h-[90vh] overflow-y-auto p-0">
+      <DialogContent className={`bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 sm:max-w-xl max-h-[90vh] p-0 ${settled ? "overflow-y-auto" : "overflow-visible"}`}>
         {project && (
           <>
-            <div className="relative w-full">
-              <Image
-                src={project.images[currentIndex]}
-                alt={project.title}
-                width={600}
-                height={400}
-                className="w-full h-auto"
-                sizes="(max-width: 640px) 100vw, 560px"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white dark:from-zinc-900 to-transparent" />
+            {/* layoutId matches the card thumbnail, so the modal grows out of the card */}
+            <motion.div
+              layoutId={`project-thumb-${project.slug}`}
+              className="relative aspect-[940/788] w-full overflow-hidden"
+              transition={{ type: "spring", stiffness: 300, damping: 34 }}
+            >
+              <AnimatePresence initial={false} custom={direction}>
+                <motion.div
+                  key={currentIndex}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ type: "spring", stiffness: 320, damping: 34 }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={project.images[currentIndex]}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 560px"
+                  />
+                </motion.div>
+              </AnimatePresence>
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white dark:from-zinc-900 to-transparent" />
               {project.award && (
                 <p className="absolute top-3 left-3 bg-yellow-500/90 text-black text-xs font-semibold px-2 py-1 rounded-full">
                   <span aria-hidden="true">🏆 </span>
@@ -50,32 +90,33 @@ export default function ProjectModal({
               {hasMultiple && (
                 <>
                   <button
-                    onClick={() => setCurrentIndex((i) => (i - 1 + project.images.length) % project.images.length)}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
+                    onClick={() => goTo(currentIndex - 1, -1)}
+                    className="absolute left-2 top-1/2 z-10 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
                     aria-label="Previous image"
                   >
                     <ChevronLeft className="size-5" />
                   </button>
                   <button
-                    onClick={() => setCurrentIndex((i) => (i + 1) % project.images.length)}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
+                    onClick={() => goTo(currentIndex + 1, 1)}
+                    className="absolute right-2 top-1/2 z-10 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
                     aria-label="Next image"
                   >
                     <ChevronRight className="size-5" />
                   </button>
                 </>
               )}
-              <DialogTitle className="absolute bottom-2 left-6 text-2xl font-bold text-black dark:text-white">
+              <DialogTitle className="absolute bottom-2 left-6 z-10 text-2xl font-bold text-black dark:text-white">
                 {project.title}
               </DialogTitle>
-            </div>
+              <DialogDescription className="sr-only">{project.description}</DialogDescription>
+            </motion.div>
 
             {hasMultiple && (
               <div className="flex justify-center gap-1.5 -mt-2 mb-1">
                 {project.images.map((_, i) => (
                   <button
                     key={i}
-                    onClick={() => setCurrentIndex(i)}
+                    onClick={() => goTo(i, i > currentIndex ? 1 : -1)}
                     className={`size-2 rounded-full transition-colors ${
                       i === currentIndex
                         ? "bg-gray-800 dark:bg-gray-200"

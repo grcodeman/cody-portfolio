@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Project } from "@/lib/projects";
@@ -55,14 +56,20 @@ export default function ProjectCard({
     <article
       ref={tiltRef}
       className="block h-full [transform-style:preserve-3d] transition-transform duration-300 ease-out will-change-transform"
-      onClick={onClick}
+      onClick={() => {
+        resetTilt();
+        onClick?.();
+      }}
       onMouseMove={handleTilt}
       onMouseLeave={resetTilt}
       aria-labelledby={project.award ? `${headingId} ${awardId}` : headingId}
     >
       <Card className="group h-full gap-0 overflow-hidden py-0 bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 cursor-pointer transition-colors duration-300 hover:border-indigo-500/60 dark:hover:border-indigo-400/60">
         {/* every screenshot is exported at 940x788, so matching that ratio crops nothing */}
-        <div className="relative aspect-[940/788] w-full overflow-hidden bg-gray-100 dark:bg-zinc-950">
+        <motion.div
+          layoutId={`project-thumb-${project.slug}`}
+          className="relative aspect-[940/788] w-full overflow-hidden bg-gray-100 dark:bg-zinc-950"
+        >
           <Image
             src={project.images[0]}
             alt={project.title}
@@ -80,7 +87,7 @@ export default function ProjectCard({
               {project.award}
             </p>
           )}
-        </div>
+        </motion.div>
 
         <CardContent className="flex flex-col gap-2 p-4">
           <h2 id={headingId} className="font-medium leading-snug">
@@ -103,6 +110,17 @@ export default function ProjectCard({
             )}
           </ul>
         </CardContent>
+
+        <div className="sr-only" aria-hidden="true">
+          <p>{project.description}</p>
+          <p>Tech: {project.tech.join(", ")}</p>
+          {project.award && <p>Award: {project.award}</p>}
+          {project.links.map((link) => (
+            <a key={link.url} href={link.url} tabIndex={-1}>
+              {project.title} — {link.label}
+            </a>
+          ))}
+        </div>
       </Card>
     </article>
   );
