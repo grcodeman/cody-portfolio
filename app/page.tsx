@@ -69,20 +69,20 @@ export default function Home() {
           >
            {/*} <Button className="rounded-full bg-gradient-to-r from-rose-600 to-indigo-600 text-white transition-transform hover:scale-105">Resume</Button> */}
 
-            <Link href="https://github.com/grcodeman" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
-              <FaGithub className="w-6 h-6"></FaGithub>
+            <Link href="https://github.com/grcodeman" target="_blank" aria-label="Cody Thornell on GitHub" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <FaGithub className="w-6 h-6" aria-hidden="true"></FaGithub>
             </Link>
 
-            <Link href="https://www.linkedin.com/in/codythornell/" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
-              <FaLinkedin className="w-6 h-6"></FaLinkedin>
+            <Link href="https://www.linkedin.com/in/codythornell/" target="_blank" aria-label="Cody Thornell on LinkedIn" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <FaLinkedin className="w-6 h-6" aria-hidden="true"></FaLinkedin>
             </Link>
 
-            <Link href="https://x.com/codythornell" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
-              <FaTwitter className="w-6 h-6"></FaTwitter>
+            <Link href="https://x.com/codythornell" target="_blank" aria-label="Cody Thornell on X" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <FaTwitter className="w-6 h-6" aria-hidden="true"></FaTwitter>
             </Link>
 
-            <Link href="https://www.youtube.com/@codewcody" target="_blank" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
-              <FaYoutube className="w-6 h-6"></FaYoutube>
+            <Link href="https://www.youtube.com/@codewcody" target="_blank" aria-label="Cody Thornell on YouTube" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <FaYoutube className="w-6 h-6" aria-hidden="true"></FaYoutube>
             </Link>
           </motion.div>
           </section>
@@ -90,8 +90,7 @@ export default function Home() {
           {/* Experience Section */}
           <motion.section
           initial={{opacity: 0, y: 100}}
-          whileInView={{opacity: 1, y:0}}
-          viewport={{once: true, amount: 0.2}}
+          animate={{opacity: 1, y:0}}
           transition={{duration: 0.8}}
           
           className="space-y-8"
@@ -178,8 +177,7 @@ export default function Home() {
           {/* Education Section */}
           <motion.section
           initial={{opacity: 0, y: 100}}
-          whileInView={{opacity: 1, y:0}}
-          viewport={{once: true, amount: 0.2}}
+          animate={{opacity: 1, y:0}}
           transition={{duration: 0.8}}
           
           className="space-y-8"
@@ -233,15 +231,14 @@ export default function Home() {
           {/* Projects Section */}
           <motion.section
           initial={{opacity: 0, y: 100}}
-          whileInView={{opacity: 1, y:0}}
-          viewport={{once: true, amount: 0.2}}
+          animate={{opacity: 1, y:0}}
           transition={{duration: 0.8}}
 
           className="space-y-8"
           >
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 items-start md:relative md:left-1/2 md:-translate-x-1/2 md:w-[min(56rem,calc(100vw-3rem))]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:relative md:left-1/2 md:-translate-x-1/2 md:w-[min(56rem,calc(100vw-3rem))]">
               {LANDING_PROJECTS.map((project) => (
                 <ProjectCard
                   key={project.slug}
