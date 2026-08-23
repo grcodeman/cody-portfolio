@@ -99,15 +99,17 @@ export default function Home() {
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Experience</h2>
 
             <div className="space-y-8">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                  <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
+                </span>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Aug 2025 - Present</p>
                   <p className="font-medium">IT Graduate Manager</p>
                   <p className="text-indigo-600 dark:text-indigo-400">WMU CAE Center</p>
                 </div>
-                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
-                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
+                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1 sm:pl-16">
                   <li>Working under the IT Director to <strong>manage a team of 12+ students</strong> in facilitating IT operations and internal software development, overseeing the College of Engineering and Applied Sciences.</li>
                   <li>Managing workflows for <strong>Image Deployment, Support Ticketing, Server Room Administration, and Software Development</strong>.</li>
                   <li>Assisting in leading a campus wide <strong>rollout of Active Directory and Group Policies across 300+ endpoints</strong>.</li>
@@ -116,15 +118,17 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                  <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
+                </span>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">May 2023 - Aug 2025</p>
                   <p className="font-medium">IT System Administrator</p>
                   <p className="text-indigo-600 dark:text-indigo-400">WMU CAE Center</p>
                 </div>
-                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
-                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
+                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1 sm:pl-16">
                   <li>Provided comprehensive IT support, troubleshooting and resolving issues related to computers, printers, projectors, and other tech equipment.</li>
                   <li>Assisted in <strong>managing licensing servers</strong> and worked with computer imaging to ensure streamlined installations and software configurations.</li>
                   <li>Utilized a <strong>ticket-based system</strong> for efficient task management, addressing both team and individual IT requirements.</li>
@@ -133,15 +137,17 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                  <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
+                </span>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Oct 2024 - Jul 2025</p>
                   <p className="font-medium">Undergraduate Research Assistant</p>
                   <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
-                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
-              <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
+              <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1 sm:pl-16">
                 <li>Contributed to multiple research projects on emerging technologies in collaboration with WMED School and partner institutions.</li>
                 <li><strong>AR/MR Research:</strong> Developed a heart-anatomy lab prototype using augmented/mixed reality alongside WMED students and faculty.</li>
                 <li><strong>AI/LLM Research:</strong> Built an SMS system via Africa&apos;s Talking to give the Ogiek community resource access, featuring preset menus and an LLM-powered RAG engine for custom queries.</li>
@@ -149,16 +155,17 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                  <Image src="/companies/gentex-black.png" alt="" aria-hidden="true" width={805} height={169} className="h-full w-full object-contain" />
+                </span>
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">May 2024 - Feb 2025</p>
                   <p className="font-medium">IT Systems Engineering Intern/Co-op</p>
                   <p className="text-indigo-600 dark:text-indigo-400">Gentex Corporation</p>
                 </div>
-                <Image src="/companies/gentex-black.png" alt="" aria-hidden="true" width={805} height={169} className="h-6 w-auto shrink-0 dark:hidden" />
-                <Image src="/companies/gentex-white.png" alt="" aria-hidden="true" width={805} height={169} className="hidden h-6 w-auto shrink-0 dark:block" />
               </div>
-                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
+                <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1 sm:pl-16">
                   <li><strong>Developed scripts</strong> and <strong>Power BI reports</strong> for multiple IT teams, enhancing operational efficiency and data analysis.</li>
                   <li>Trained with the Oracle DBA team, performing DBA tasks on <strong>Oracle EBS</strong> systems via <strong>Linux</strong> and web interfaces, as well as assisting with database patching and cloning.</li>
                   <li>Engineered scripts and queries using <strong>Bash, SQL, PL/SQL, and Python</strong> for Linux maintenance and IT reporting needs.</li>
@@ -179,29 +186,36 @@ export default function Home() {
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Education</h2>
 
             <div className="space-y-2">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                  <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
+                </span>
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2025 - Exp May 2027</p>
                   <p className="font-medium">MBA Admitted</p>
                   <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
-                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
             </div>
 
             <div className="space-y-2">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                  <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-full w-full object-contain" />
+                </span>
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Aug 2022 - Apr 2025</p>
                   <p className="font-medium">B.S. Computer Science</p>
                   <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
-                <Image src="/companies/wmu.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 shrink-0" />
               </div>
             </div>
 
             <div className="space-y-2">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-white p-1.5 ring-1 ring-gray-200 dark:ring-zinc-700">
+                  <Image src="/companies/grcc.png" alt="" aria-hidden="true" width={5417} height={1917} className="h-full w-full object-contain" />
+                </span>
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2020 - May 2023</p>
                   <p className="font-medium">A.S. Computer Science</p>
