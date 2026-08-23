@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 
-// AI/LLM crawlers are explicitly welcome — the site should be readable by agents.
+// AI/LLM crawlers are explicitly welcome - the site should be readable by agents.
 const AI_AGENTS = [
   "GPTBot",
   "ChatGPT-User",

@@ -14,7 +14,7 @@ export default function Header() {
       {/* PFP */}
       <Link
         href="/"
-        aria-label="Cody Thornell — home"
+        aria-label="Cody Thornell - home"
         className="block w-20 h-20 rounded-full overflow-hidden"
       >
         <Image src={pfp} alt="" aria-hidden="true" className="transition-all duration-300 hover:scale-110" />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const description =
-  "Get in touch with Cody Thornell — IT and software developer based in Kalamazoo, MI.";
+  "Get in touch with Cody Thornell - IT and software developer based in Kalamazoo, MI.";
 
 export const metadata: Metadata = {
   title: "Contact",

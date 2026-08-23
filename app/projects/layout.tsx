@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const description =
-  "Projects by Cody Thornell — web, mobile, AI/ML, AR/VR, and IT tooling, including VolleyNet, BroncoNav, Cultivate269, Shelf Inventory, and hackathon winners.";
+  "Projects by Cody Thornell - web, mobile, AI/ML, AR/VR, and IT tooling, including VolleyNet, BroncoNav, Cultivate269, Shelf Inventory, and hackathon winners.";
 
 export const metadata: Metadata = {
   // a plain string here would clear the root template for every child route,

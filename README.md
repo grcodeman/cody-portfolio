@@ -1,6 +1,6 @@
 <div align="center">
 
-# Cody Thornell — Portfolio
+# Cody Thornell - Portfolio
 
 Personal site for my experience, education, and projects.
 Built to learn web dev in the open, and kept as my main showcase.
@@ -22,7 +22,7 @@ Built to learn web dev in the open, and kept as my main showcase.
 | | |
 |---|---|
 | **Home** | Who I am, my IT and software experience, and education |
-| **Projects** | Everything I've built — web, mobile, AI/ML, AR/VR, hackathons, and IT tooling |
+| **Projects** | Everything I've built - web, mobile, AI/ML, AR/VR, hackathons, and IT tooling |
 | **Blog** | Writing on what I'm working on and learning (coming soon) |
 | **Contact** | Get in touch |
 
@@ -64,14 +64,14 @@ npm run lint     # eslint
 
 ```
 app/
-  page.tsx              # home — bio, experience, education, featured projects
+  page.tsx              # home - bio, experience, education, featured projects
   projects/             # listing, plus [slug] detail pages + per-project OG images
   blog/  contact/
   opengraph-image.tsx   # site-wide social card
   robots.ts  sitemap.ts
-components/             # Header, Footer, ProjectCard, ProjectModal, ProjectGallery…
+components/             # Header, Footer, ProjectCard, ProjectModal, ProjectGallery...
 lib/
-  projects.ts           # every project — the single source of truth
+  projects.ts           # every project - the single source of truth
   site.ts               # canonical URL and shared site metadata
 public/
   projects/             # screenshots (940×788)
@@ -86,5 +86,5 @@ from it.
 ## Credit
 
 Followed this [tutorial video](https://www.youtube.com/watch?v=12ZeRqf5CQE) from
-**How To Web Dev** on YouTube to get started, then took it well past that — navigation,
+**How To Web Dev** on YouTube to get started, then took it well past that - navigation,
 blog, contact page, project pages, and the rest.

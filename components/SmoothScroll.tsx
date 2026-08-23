@@ -16,7 +16,7 @@ export default function SmoothScroll() {
     requestAnimationFrame(raf);
 
     // Radix locks the body when a dialog opens, but Lenis scrolls from its own
-    // rAF loop and ignores overflow:hidden — it has to be stopped explicitly.
+    // rAF loop and ignores overflow:hidden - it has to be stopped explicitly.
     const syncLock = () => {
       if (document.body.hasAttribute("data-scroll-locked")) lenis.stop();
       else lenis.start();

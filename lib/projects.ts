@@ -66,7 +66,7 @@ export const projects: Project[] = [
     slug: "ignite-atp",
     title: "Ignite Camp AI Platform",
     description:
-      "AI platform for camp staff with General, Research, and Prototype modes — access-code auth, per-user energy budgets, and one-shot clickable prototypes.",
+      "AI platform for camp staff with General, Research, and Prototype modes - access-code auth, per-user energy budgets, and one-shot clickable prototypes.",
     tech: ["Next.js", "Nebius", "Supabase", "Firecrawl"],
     categories: ["AI/ML", "Web Dev"],
     images: ["/projects/ignite.png", "/projects/ignite2.png", "/projects/ignite3.png"],
@@ -134,7 +134,7 @@ export const projects: Project[] = [
     slug: "hackwmu-2024",
     title: "HackWMU 2024",
     description:
-      "Water research tracking app — won 1st place at HackWMU 2024.",
+      "Water research tracking app - won 1st place at HackWMU 2024.",
     tech: ["Flutter", "Dart"],
     categories: ["Hackathon"],
     images: ["/projects/hackwmu3.png", "/projects/hackwmu1.png", "/projects/hackwmu2.png"],
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     slug: "mwc3-python",
     title: "MWC3 2024 Python",
     description:
-      "Competitive programming challenge — won 1st place at the MWC3 coding competition.",
+      "Competitive programming challenge - won 1st place at the MWC3 coding competition.",
     tech: ["Python", "Pandas"],
     categories: ["Hackathon"],
     images: ["/projects/mwc3python.png"],
