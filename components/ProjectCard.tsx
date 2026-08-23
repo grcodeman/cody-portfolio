@@ -1,8 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Project } from "@/lib/projects";
+
+const MAX_TILT = 7; // degrees at the card's edge
 
 const MAX_TECH = 3;
 const TECH_CHAR_BUDGET = 26;
@@ -31,21 +34,40 @@ export default function ProjectCard({
   const awardId = `project-${project.slug}-award`;
   const shownTech = visibleTech(project.tech);
   const extraTech = project.tech.length - shownTech.length;
+  const tiltRef = useRef<HTMLElement>(null);
+
+  // Written straight to the node: a state update per mousemove would re-render
+  // every card in the grid.
+  const handleTilt = (e: React.MouseEvent) => {
+    const el = tiltRef.current;
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - 0.5;
+    const py = (e.clientY - r.top) / r.height - 0.5;
+    el.style.transform = `perspective(800px) rotateX(${(-py * MAX_TILT).toFixed(2)}deg) rotateY(${(px * MAX_TILT).toFixed(2)}deg) scale(1.02)`;
+  };
+
+  const resetTilt = () => {
+    if (tiltRef.current) tiltRef.current.style.transform = "";
+  };
 
   return (
     <article
-      className="block h-full"
+      ref={tiltRef}
+      className="block h-full [transform-style:preserve-3d] transition-transform duration-300 ease-out will-change-transform"
       onClick={onClick}
+      onMouseMove={handleTilt}
+      onMouseLeave={resetTilt}
       aria-labelledby={project.award ? `${headingId} ${awardId}` : headingId}
     >
       <Card className="group h-full gap-0 overflow-hidden py-0 bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 cursor-pointer transition-colors duration-300 hover:border-indigo-500/60 dark:hover:border-indigo-400/60">
-        {/* screenshots vary wildly in aspect; crop from the top so page headers survive */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100 dark:bg-zinc-950">
+        {/* every screenshot is exported at 940x788, so matching that ratio crops nothing */}
+        <div className="relative aspect-[940/788] w-full overflow-hidden bg-gray-100 dark:bg-zinc-950">
           <Image
             src={project.images[0]}
             alt={project.title}
             fill
-            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            className="object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 300px"
           />
           {project.award && (
