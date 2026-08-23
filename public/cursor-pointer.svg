@@ -6,9 +6,9 @@
       <stop offset="100%" stop-color="#0ea5e9"/>
     </linearGradient>
     <g id="hand">
-      <rect x="9.2" y="2" width="3.8" height="12" rx="1.9"/>
-      <rect x="4.8" y="13.5" width="3.6" height="7" rx="1.8"/>
-      <rect x="7" y="10.8" width="12.4" height="12.2" rx="4.5"/>
+      <rect x="8" y="2" width="3.8" height="12" rx="1.9"/>
+      <rect x="4.6" y="14" width="3.6" height="6.8" rx="1.8"/>
+      <rect x="7.6" y="10.8" width="11.8" height="12.2" rx="4.4"/>
     </g>
   </defs>
   <!-- stroked copy behind the fill: outlines the union without showing seams between the parts -->

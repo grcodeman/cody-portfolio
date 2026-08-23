@@ -195,5 +195,5 @@ body {
 
 /* matching hand cursor for anything clickable */
 a, button, summary, label, select, [role="button"], .cursor-pointer {
-  cursor: url("/cursor-pointer.svg") 11 2, pointer;
+  cursor: url("/cursor-pointer.svg") 10 2, pointer;
 }
