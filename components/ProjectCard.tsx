@@ -32,14 +32,16 @@ export default function ProjectCard({
           </p>
         )}
         <CardContent className="p-4">
-          <Image
-            src={project.images[0]}
-            alt={project.title}
-            width={600}
-            height={400}
-            className="rounded-lg mb-4 w-full aspect-video object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 290px"
-          />
+          <div className="mb-4 aspect-video w-full overflow-hidden rounded-lg bg-white dark:bg-zinc-950">
+            <Image
+              src={project.images[0]}
+              alt={project.title}
+              width={600}
+              height={400}
+              className="h-full w-full object-contain"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 290px"
+            />
+          </div>
           <div>
             <h3 id={headingId} className="font-medium">{project.title}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
