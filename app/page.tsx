@@ -217,7 +217,7 @@ export default function Home() {
           >
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:relative md:left-1/2 md:-translate-x-1/2 md:w-[min(56rem,calc(100vw-3rem))]">
               {LANDING_PROJECTS.map((project) => (
                 <ProjectCard
                   key={project.slug}

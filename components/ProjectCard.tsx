@@ -38,7 +38,7 @@ export default function ProjectCard({
             width={600}
             height={400}
             className="rounded-lg mb-4 w-full aspect-video object-cover"
-            sizes="(max-width: 640px) 100vw, 280px"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 290px"
           />
           <div>
             <h3 id={headingId} className="font-medium">{project.title}</h3>
