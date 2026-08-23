@@ -89,7 +89,8 @@ export default function Home() {
           {/* Experience Section */}
           <motion.section
           initial={{opacity: 0, y: 100}}
-          animate={{opacity: 1, y:0}}
+          whileInView={{opacity: 1, y:0}}
+          viewport={{once: true, amount: 0.2}}
           transition={{duration: 0.8}}
           
           className="space-y-8"
@@ -101,7 +102,7 @@ export default function Home() {
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Aug 2025 - Present</p>
                   <p className="font-medium">IT Graduate Manager</p>
-                  <p className="text-blue-600 dark:text-blue-400">WMU CAE Center</p>
+                  <p className="text-indigo-600 dark:text-indigo-400">WMU CAE Center</p>
                 </div>
               </div>
                 <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
@@ -117,7 +118,7 @@ export default function Home() {
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">May 2023 - Aug 2025</p>
                   <p className="font-medium">IT System Administrator</p>
-                  <p className="text-blue-600 dark:text-blue-400">WMU CAE Center</p>
+                  <p className="text-indigo-600 dark:text-indigo-400">WMU CAE Center</p>
                 </div>
               </div>
                 <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
@@ -133,7 +134,7 @@ export default function Home() {
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Oct 2024 - Jul 2025</p>
                   <p className="font-medium">Undergraduate Research Assistant</p>
-                  <p className="text-blue-600 dark:text-blue-400">Western Michigan University</p>
+                  <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
               </div>
               <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
@@ -148,7 +149,7 @@ export default function Home() {
                 <div className="space-y-1">
                   <p className="text-gray-600 dark:text-gray-400 text-sm">May 2024 - Feb 2025</p>
                   <p className="font-medium">IT Systems Engineering Intern/Co-op</p>
-                  <p className="text-blue-600 dark:text-blue-400">Gentex Corporation</p>
+                  <p className="text-indigo-600 dark:text-indigo-400">Gentex Corporation</p>
                 </div>
               </div>
                 <ul className="text-gray-600 dark:text-gray-400 text-sm list-disc list-inside marker:text-indigo-600 space-y-1">
@@ -163,7 +164,8 @@ export default function Home() {
           {/* Education Section */}
           <motion.section
           initial={{opacity: 0, y: 100}}
-          animate={{opacity: 1, y:0}}
+          whileInView={{opacity: 1, y:0}}
+          viewport={{once: true, amount: 0.2}}
           transition={{duration: 0.8}}
           
           className="space-y-8"
@@ -174,8 +176,8 @@ export default function Home() {
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2025 - Exp May 2027</p>
-                  <p className="Font Medium">MBA Admitted</p>
-                  <p className="text-blue-600 dark:text-blue-400">Western Michigan University</p>
+                  <p className="font-medium">MBA Admitted</p>
+                  <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
               </div>
             </div>
@@ -184,8 +186,8 @@ export default function Home() {
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Aug 2022 - Apr 2025</p>
-                  <p className="Font Medium">B.S. Computer Science</p>
-                  <p className="text-blue-600 dark:text-blue-400">Western Michigan University</p>
+                  <p className="font-medium">B.S. Computer Science</p>
+                  <p className="text-indigo-600 dark:text-indigo-400">Western Michigan University</p>
                 </div>
               </div>
             </div>
@@ -194,8 +196,8 @@ export default function Home() {
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">Sep 2020 - May 2023</p>
-                  <p className="Font Medium">A.S. Computer Science</p>
-                  <p className="text-blue-600 dark:text-blue-400">Grand Rapids Community College</p>
+                  <p className="font-medium">A.S. Computer Science</p>
+                  <p className="text-indigo-600 dark:text-indigo-400">Grand Rapids Community College</p>
                 </div>
               </div>
             </div>
@@ -207,14 +209,15 @@ export default function Home() {
           {/* Projects Section */}
           <motion.section
           initial={{opacity: 0, y: 100}}
-          animate={{opacity: 1, y:0}}
+          whileInView={{opacity: 1, y:0}}
+          viewport={{once: true, amount: 0.2}}
           transition={{duration: 0.8}}
 
           className="space-y-8"
           >
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {LANDING_PROJECTS.map((project) => (
                 <ProjectCard
                   key={project.slug}

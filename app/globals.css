@@ -185,3 +185,10 @@ body {
   background: #6366f1; /* indigo-500, mid-stop of the name gradient */
   color: #fff;
 }
+
+/* visible keyboard focus (browser default is inconsistent / invisible on dark) */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
