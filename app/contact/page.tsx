@@ -62,6 +62,16 @@ export default function Contact() {
                   required
                 ></textarea>
               </div>
+              {/* Honeypot: bots fill it, humans never see it. Formspree drops any
+                  submission where _gotcha is non-empty. */}
+              <div className="absolute -left-[5000px]" aria-hidden="true">
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
               <button type="submit">Send Message</button>
             </form>
           </div>
