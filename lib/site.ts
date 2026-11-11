@@ -8,6 +8,6 @@ export const SITE_DESCRIPTION =
 export const SOCIAL_LINKS = [
   "https://github.com/grcodeman",
   "https://www.linkedin.com/in/codythornell/",
-  "https://x.com/codythornell",
-  "https://www.youtube.com/@codewcody",
+  // "https://x.com/codythornell",
+  // "https://www.youtube.com/@codewcody",
 ];
