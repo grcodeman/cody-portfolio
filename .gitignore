@@ -51,3 +51,8 @@ next-env.d.ts
 # playwright
 test-results/
 playwright-report/
+
+# local agent/browser tooling state
+.gstack/
+.impeccable/
+.claude/settings.local.json
