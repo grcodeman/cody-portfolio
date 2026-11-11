@@ -28,7 +28,7 @@ export default function ProjectFilter({ active, onChange }: ProjectFilterProps) 
             {isActive && (
               <motion.span
                 layoutId="filter-blob"
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-rose-600 to-indigo-600"
+                className="absolute inset-0 rounded-full bg-signature"
                 transition={{ type: "spring", stiffness: 380, damping: 32 }}
               />
             )}

@@ -1,85 +1,60 @@
-"use client"
-
 import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import { motion } from 'framer-motion';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+    <div className="text-black dark:text-white transition-colors duration-300">
       <div className="mx-auto max-w-xl px-4 py-20">
-        
-        {/* Header Section */}
         <Header />
 
-        
-        
-        <main className="space-y-10">
-        <motion.section
-          initial={{opacity: 0, y: 100}}
-          animate={{opacity: 1, y:0}}
-          transition={{duration: 0.8}}
-          
-          className="space-y-8"
-          >
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block mb-8">
-            Contact
-          </h1>
-          
-          <div className="space-y-6">
-          
-            <form
-              className="contact-form"
-              action="https://formspree.io/f/mjkabbwk"
-              method="POST"
-            >
-              <div>
-                <label htmlFor="email">Email:</label>
-                <input 
-                  type="email" 
-                  name="email" 
-                  id="email"
-                  placeholder="your.email@example.com"
-                  required 
-                />
-              </div>
-              <div>
-                <label htmlFor="name">Name:</label>
-                <input 
-                  type="text" 
-                  name="name" 
-                  id="name"
-                  placeholder="Your full name"
-                  required 
-                />
-              </div>
-              <div>
-                <label htmlFor="message">Message:</label>
-                <textarea 
-                  name="message" 
-                  id="message"
-                  placeholder="Your message here"
-                  required
-                ></textarea>
-              </div>
-              {/* Honeypot: bots fill it, humans never see it. Formspree drops any
-                  submission where _gotcha is non-empty. */}
-              <div className="absolute -left-[5000px]" aria-hidden="true">
-                <input
-                  type="text"
-                  name="_gotcha"
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
-              </div>
-              <button type="submit">Send Message</button>
-            </form>
-          </div>
+        <main className="space-y-8">
+          <h1 className="text-4xl font-bold">Contact</h1>
 
-          </motion.section>
-          
-          {/* Footer Section */}
-          <Footer />
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/mjkabbwk"
+            method="POST"
+          >
+            <div>
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                autoComplete="name"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autoComplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                required
+              ></textarea>
+            </div>
+            {/* Honeypot: bots fill it, humans never see it. Formspree drops any
+                submission where _gotcha is non-empty. */}
+            <div className="absolute -left-[5000px]" aria-hidden="true">
+              <input
+                type="text"
+                name="_gotcha"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+            <button type="submit">Send message</button>
+          </form>
         </main>
       </div>
     </div>

@@ -126,69 +126,53 @@
   .contact-form {
     @apply space-y-6;
   }
-  
+
   .contact-form label {
     @apply block text-sm font-medium text-foreground mb-2;
   }
-  
+
   .contact-form input,
   .contact-form textarea {
-    @apply w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground 
-           placeholder:text-muted-foreground focus:outline-none focus:ring-2 
-           focus:ring-ring focus:border-transparent transition-all duration-200
+    @apply w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground caret-blue-600
+           placeholder:text-muted-foreground focus:outline-none focus:ring-2
+           focus:ring-blue-600 focus:border-transparent transition-colors duration-200
            hover:border-ring/50;
   }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    @apply shadow-lg shadow-ring/10;
-  }
-  
+
   .contact-form textarea {
     @apply min-h-[120px] max-h-[300px] resize-y;
   }
-  
-  .contact-form button[type="submit"] {
-    @apply w-full px-6 py-3 rounded-lg font-medium text-primary-foreground
-           bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500
-           hover:from-rose-700 hover:via-indigo-600 hover:to-sky-600
-           focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 
-           focus:ring-offset-background transition-all duration-200
-           transform hover:scale-[1.02] active:scale-[0.98]
-           shadow-lg hover:shadow-xl;
-  }
-  
-  .contact-form button[type="submit"]:disabled {
-    @apply opacity-50 cursor-not-allowed hover:scale-100;
-  }
-}
 
-/* Dark mode specific enhancements */
-@layer components {
+  .contact-form button[type="submit"] {
+    @apply w-full px-6 py-3 rounded-lg font-medium text-white bg-signature
+           hover:brightness-90 transition-[filter] duration-200
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2
+           focus-visible:ring-offset-background;
+  }
+
+  .contact-form button[type="submit"]:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
   .dark .contact-form input,
   .dark .contact-form textarea {
-    @apply bg-input/50 backdrop-blur-sm;
-  }
-  
-  .dark .contact-form input:focus,
-  .dark .contact-form textarea:focus {
-    @apply bg-input/70;
+    @apply bg-zinc-950;
   }
 }
 
-/* gradient arrow cursor (matches the name gradient); Safari ignores SVG cursors and falls back */
+/* blue arrow cursor (the accent color); Safari ignores SVG cursors and falls back */
 body {
   cursor: url("/cursor.svg") 3 2, auto;
 }
 
 ::selection {
-  background: #6366f1; /* indigo-500, mid-stop of the name gradient */
+  background: #2563eb; /* blue-600, the accent */
   color: #fff;
 }
 
 /* visible keyboard focus (browser default is inconsistent / invisible on dark) */
 :focus-visible {
-  outline: 2px solid #6366f1;
+  outline: 2px solid #2563eb;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -196,4 +180,17 @@ body {
 /* matching hand cursor for anything clickable */
 a, button, summary, label, select, [role="button"], .cursor-pointer {
   cursor: url("/cursor-pointer.svg") 10 2, pointer;
+}
+
+/* light cursors are blue-700 (reads on the pale sky), dark are blue-600 (reads on black) */
+.dark body {
+  cursor: url("/cursor-dark.svg") 3 2, auto;
+}
+.dark :is(a, button, summary, label, select, [role="button"], .cursor-pointer) {
+  cursor: url("/cursor-pointer-dark.svg") 10 2, pointer;
+}
+
+/* filled accent surfaces (buttons, active pills); blue-600 keeps white text at 5.2:1 in both themes */
+@utility bg-signature {
+  @apply bg-blue-600;
 }

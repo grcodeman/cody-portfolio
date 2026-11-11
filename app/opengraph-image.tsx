@@ -6,7 +6,7 @@ export const alt = "Cody Thornell - IT and Software Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const GRADIENT = "linear-gradient(90deg, #e11d48 0%, #6366f1 50%, #0ea5e9 100%)";
+const ACCENT = "#2563eb";
 
 export default async function OpengraphImage() {
   // Satori can't fetch relative URLs, so the avatar is inlined as a data URI.
@@ -34,9 +34,7 @@ export default async function OpengraphImage() {
               fontSize: 88,
               fontWeight: 700,
               letterSpacing: "-0.02em",
-              backgroundImage: GRADIENT,
-              backgroundClip: "text",
-              color: "transparent",
+              color: "#ffffff",
             }}
           >
             Cody Thornell
@@ -47,13 +45,13 @@ export default async function OpengraphImage() {
           <div style={{ display: "flex", fontSize: 28, color: "#9ca3af", marginTop: 12 }}>
             MBA/CS Student · Kalamazoo, MI
           </div>
-          <div style={{ display: "flex", height: 8, width: 320, marginTop: 44, background: GRADIENT }} />
+          <div style={{ display: "flex", height: 8, width: 320, marginTop: 44, background: ACCENT }} />
           <div style={{ display: "flex", fontSize: 26, color: "#6b7280", marginTop: 44 }}>
             codythornell.com
           </div>
         </div>
 
-        {/* gradient ring echoes the site's headings */}
+        {/* accent ring */}
         <div
           style={{
             display: "flex",
@@ -62,7 +60,7 @@ export default async function OpengraphImage() {
             width: 340,
             height: 340,
             borderRadius: "50%",
-            background: GRADIENT,
+            background: ACCENT,
             padding: 8,
             flexShrink: 0,
           }}

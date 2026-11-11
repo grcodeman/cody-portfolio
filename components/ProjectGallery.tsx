@@ -20,15 +20,10 @@ export default function ProjectGallery({
     >
       {/* every screenshot is exported at 940x788, so matching that ratio crops nothing */}
       <div className="relative w-full min-w-0 flex-1">
-        {/* signature gradient, as a soft halo under the plate rather than on text */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-6 -bottom-3 -z-10 h-16 rounded-[50%] bg-gradient-to-r from-rose-600/25 via-indigo-500/25 to-sky-500/25 blur-2xl dark:from-rose-600/40 dark:via-indigo-500/40 dark:to-sky-500/40"
-        />
         {/* The images are stacked and cross-dissolved with opacity alone: every
             frame has an image at full opacity, so the container never shows
             through mid-swap and nothing re-mounts (no reload, no flash). */}
-        <div className="relative aspect-[940/788] w-full overflow-hidden rounded-xl border border-gray-200 bg-gray-100 shadow-lg shadow-indigo-950/10 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/50">
+        <div className="relative aspect-[940/788] w-full overflow-hidden rounded-xl border border-gray-200 bg-gray-100 shadow-lg shadow-blue-950/10 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/50">
           {images.map((src, i) => (
             <Image
               key={src}
@@ -79,7 +74,7 @@ export default function ProjectGallery({
                 aria-current={i === active ? "true" : undefined}
                 className={`relative block aspect-[940/788] w-full overflow-hidden rounded-md border bg-gray-100 transition-opacity duration-200 dark:bg-zinc-950 ${
                   i === active
-                    ? "border-indigo-500 opacity-100 dark:border-indigo-400"
+                    ? "border-blue-600 opacity-100 dark:border-blue-400"
                     : "border-gray-200 opacity-55 hover:opacity-100 dark:border-zinc-800"
                 }`}
               >

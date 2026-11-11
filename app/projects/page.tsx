@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ProjectFilter from "@/components/ProjectFilter";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectModal from "@/components/ProjectModal";
@@ -20,23 +18,16 @@ export default function ProjectsPage() {
       : projects.filter((p) => p.categories.includes(activeCategory));
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+    <div className="text-black dark:text-white transition-colors duration-300">
       <ProjectsJsonLd projects={projects} />
       <div className="mx-auto max-w-xl px-4 py-20">
         <Header />
 
         <main className="space-y-10">
-          <motion.section
-            initial={{opacity: 0, y: 100}}
-            animate={{opacity: 1, y: 0}}
-            transition={{duration: 0.8}}
-            className="space-y-8"
-          >
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">
-              Projects
-            </h1>
+          <section className="space-y-8">
+            <h1 className="text-4xl font-bold">Projects</h1>
             <p className="text-gray-600 dark:text-gray-400">
-              A collection of things I&apos;ve built, hacked, and shipped.
+              Stuff I&apos;ve built, for work and for fun.
             </p>
 
             <ProjectFilter
@@ -44,19 +35,18 @@ export default function ProjectsPage() {
               onChange={(cat) => setActiveCategory(cat)}
             />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:relative md:left-1/2 md:-translate-x-1/2 md:w-[min(56rem,calc(100vw-3rem))]">
-              {filtered.map((project) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:relative md:left-1/2 md:-translate-x-1/2 md:w-[min(56rem,calc(100vw-3rem))]">
+              {filtered.map((project, i) => (
                 <ProjectCard
                   key={project.slug}
                   project={project}
+                  priority={i === 0}
                   onClick={() => setSelectedProject(project)}
                 />
               ))}
             </div>
 
-          </motion.section>
-
-          <Footer />
+          </section>
         </main>
       </div>
 

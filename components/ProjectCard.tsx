@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
+import { Trophy } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import ProjectShareActions from "@/components/ProjectShareActions";
 import type { Project } from "@/lib/projects";
@@ -10,7 +11,7 @@ import type { Project } from "@/lib/projects";
 const MAX_TILT = 7; // degrees at the card's edge
 
 const MAX_TECH = 3;
-const TECH_CHAR_BUDGET = 18; // leaves room for the icon actions on the same row
+const TECH_CHAR_BUDGET = 16; // at 12px, leaves room for the icon actions on the same row
 
 // Pick whole tech labels that fit one line; the rest collapse into "+N".
 // Budgeting by length beats flex-shrink, which ellipsises every pill at once.
@@ -28,9 +29,11 @@ function visibleTech(tech: string[]) {
 export default function ProjectCard({
   project,
   onClick,
+  priority = false,
 }: {
   project: Project;
   onClick?: () => void;
+  priority?: boolean;
 }) {
   const headingId = `project-${project.slug}-title`;
   const awardId = `project-${project.slug}-award`;
@@ -72,7 +75,7 @@ export default function ProjectCard({
     >
       {/* no overflow-hidden here: it would clip the thumbnail's flight back from the modal.
           The thumbnail rounds its own top corners instead. */}
-      <Card className="group h-full gap-0 py-0 bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 cursor-pointer transition-colors duration-300 hover:border-indigo-500/60 dark:hover:border-indigo-400/60">
+      <Card className="group h-full gap-0 py-0 bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 cursor-pointer transition-colors duration-300 hover:border-blue-600/60 dark:hover:border-blue-400/60">
         {/* every screenshot is exported at 940x788, so matching that ratio crops nothing */}
         <motion.div
           layoutId={reduceMotion ? undefined : `project-thumb-${project.slug}`}
@@ -84,15 +87,16 @@ export default function ProjectCard({
             src={project.images[0]}
             alt={project.title}
             fill
+            priority={priority}
             className="object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 300px"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
           />
           {project.award && (
             <p
               id={awardId}
-              className="absolute top-2 right-2 rounded-full bg-yellow-400/95 px-2 py-0.5 text-[10px] font-semibold text-black shadow-sm"
+              className="absolute top-2 right-2 inline-flex items-center gap-1 rounded-full bg-yellow-400 px-2 py-0.5 text-xs font-semibold text-black shadow-sm"
             >
-              <span aria-hidden="true">🏆 </span>
+              <Trophy className="size-3" aria-hidden="true" />
               <span className="sr-only">Award: </span>
               {project.award}
             </p>
@@ -108,13 +112,13 @@ export default function ProjectCard({
             {shownTech.map((tech) => (
               <li
                 key={tech}
-                className="shrink-0 rounded-full bg-gray-200/70 px-2 py-0.5 text-[11px] whitespace-nowrap text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
+                className="shrink-0 rounded-full bg-gray-200/70 px-2 py-0.5 text-xs whitespace-nowrap text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
               >
                 {tech}
               </li>
             ))}
             {extraTech > 0 && (
-              <li className="shrink-0 px-1 py-0.5 text-[11px] whitespace-nowrap text-gray-500 dark:text-gray-400">
+              <li className="shrink-0 px-1 py-0.5 text-xs whitespace-nowrap text-gray-500 dark:text-gray-400">
                 +{extraTech}
               </li>
             )}

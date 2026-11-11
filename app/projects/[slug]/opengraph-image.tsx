@@ -7,7 +7,7 @@ export const alt = "Project by Cody Thornell";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const GRADIENT = "linear-gradient(90deg, #e11d48 0%, #6366f1 50%, #0ea5e9 100%)";
+const ACCENT = "#2563eb";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -54,9 +54,7 @@ export default async function OpengraphImage({
               fontWeight: 700,
               letterSpacing: "-0.02em",
               lineHeight: 1.1,
-              backgroundImage: GRADIENT,
-              backgroundClip: "text",
-              color: "transparent",
+              color: "#ffffff",
             }}
           >
             {project.title}
@@ -69,20 +67,20 @@ export default async function OpengraphImage({
           <div style={{ display: "flex", fontSize: 26, color: "#9ca3af", marginTop: 20 }}>
             {project.tech.slice(0, 4).join(" · ")}
           </div>
-          <div style={{ display: "flex", height: 8, width: 260, marginTop: 36, background: GRADIENT }} />
+          <div style={{ display: "flex", height: 8, width: 260, marginTop: 36, background: ACCENT }} />
           <div style={{ display: "flex", fontSize: 24, color: "#6b7280", marginTop: 36 }}>
             codythornell.com
           </div>
         </div>
 
-        {/* gradient frame echoes the site's headings */}
+        {/* accent frame */}
         <div
           style={{
             display: "flex",
             width: 456,
             height: 384,
             borderRadius: 20,
-            background: GRADIENT,
+            background: ACCENT,
             padding: 6,
             flexShrink: 0,
           }}

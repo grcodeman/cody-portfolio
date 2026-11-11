@@ -27,7 +27,7 @@ export default function ProjectShareActions({
 
   const control =
     size === "md"
-      ? "inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:border-indigo-500/60 hover:text-black dark:border-zinc-800 dark:text-gray-300 dark:hover:border-indigo-400/60 dark:hover:text-white"
+      ? "inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:border-blue-600/60 hover:text-black dark:border-zinc-800 dark:text-gray-300 dark:hover:border-blue-400/60 dark:hover:text-white"
       : "inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] text-gray-600 transition-colors hover:bg-gray-200/70 hover:text-black dark:text-gray-400 dark:hover:bg-zinc-800 dark:hover:text-white";
   const icon = size === "md" ? "size-4" : "size-3.5";
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight, Trophy } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -84,8 +84,8 @@ export default function ProjectModal({
               </AnimatePresence>
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white dark:from-zinc-900 to-transparent" />
               {project.award && (
-                <p className="absolute top-3 left-3 bg-yellow-500/90 text-black text-xs font-semibold px-2 py-1 rounded-full">
-                  <span aria-hidden="true">🏆 </span>
+                <p className="absolute top-3 left-3 inline-flex items-center gap-1 bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full">
+                  <Trophy className="size-3.5" aria-hidden="true" />
                   <span className="sr-only">Award: </span>
                   {project.award}
                 </p>
