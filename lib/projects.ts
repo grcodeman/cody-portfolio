@@ -88,8 +88,8 @@ export const projects: Project[] = [
     slug: "atom-medic",
     title: "ATOM Medic",
     description:
-      "Heart-anatomy lab prototype using augmented/mixed reality with Unity, Flutter, and HoloLens.",
-    tech: ["Unity", "Flutter", "Firebase", "Hololens"],
+      "HoloLens 2 mixed reality assistant that walks EMS crews step by step through pediatric medication dosing, with a companion Flutter tablet app and Firebase sync.",
+    tech: ["Unity", "HoloLens", "Flutter", "Firebase", "Blender"],
     categories: ["Mobile", "AR/VR"],
     images: ["/projects/atom.png", "/projects/atom2.png", "/projects/atom3.png"],
     links: [{ label: "Presentation", url: "https://drive.google.com/file/d/1XQR8a8fOhKnBW354L3MIUmQ4YsgYtl55/view" }, { label: "Article", url: "https://wmich.edu/news/2023/05/71778" }],
