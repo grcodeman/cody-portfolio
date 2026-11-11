@@ -5,6 +5,9 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import SmoothScroll from "@/components/SmoothScroll";
 import PersonJsonLd from "@/components/PersonJsonLd";
+import Starfield from "@/components/Starfield";
+import LightSky from "@/components/LightSky";
+import Footer from "@/components/Footer";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 
@@ -74,10 +77,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className}  antialiased`}
+        className={`${inter.className} antialiased flex min-h-screen flex-col overflow-x-clip bg-white dark:bg-black transition-colors duration-300`}
       >
         <PersonJsonLd />
-        <Script id="ms-clarity" strategy="afterInteractive">
+        <Script id="ms-clarity" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -92,7 +95,12 @@ export default function RootLayout({
         enableSystem
         defaultTheme="system"
         >
-          {children}
+          {/* site-wide backgrounds: fixed at -z-10, behind every page */}
+          <Starfield />
+          <LightSky />
+          {/* flex-1 pushes the footer to the bottom on short pages */}
+          <div className="flex-1">{children}</div>
+          <Footer />
         </ThemeProvider>
         
       </body>
